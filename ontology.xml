@@ -1,0 +1,3741 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#"
+     xml:base="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance">
+        <rdfs:comment>The Industrial Maintenance Ontology IMO aims to model industrial maintenance concepts (predictive and corrective). This first part named &quot;Infrastructure&quot; covers structural concerns of the domain  (i.e, organization and composition) like relationship between elements of interest, physical or digital : Entities, Functions, Properties, etc. and some of their specialization.
+It is reusing concepts from ontologies like Smart Applications REFerence Ontology SAREF and Semantic Sensor Network Ontology SSN.</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#agent -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#agent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Relates an event to an active agent (a person, a computer, ... )</rdfs:comment>
+        <rdfs:label>hasAgent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#factor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#factor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause"/>
+        <rdfs:range rdf:resource="http://purl.org/NET/c4dm/event.owl#Factor"/>
+        <rdfs:comment>Relates an event to a passive factor (a tool, an instrument, an abstract cause...)</rdfs:comment>
+        <rdfs:label>hasCause</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#place -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#place">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>Relates an event to an object.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#product -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#product">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction"/>
+        <rdfs:comment>Relates an event to something produced during the event---a sound, a pie, whatever...</rdfs:comment>
+        <rdfs:label>products</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#sub_event -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/event.owl#sub_event">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>This property provides a way to split a complex event into simpler ones.</rdfs:comment>
+        <rdfs:label>hasSubEvent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component"/>
+        <rdfs:comment>A related resource that is included either physically or logically in the described resource.
+Relation between a Platform or System and its smallest Components (parts) .</rdfs:comment>
+        <rdfs:label>hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:comment>A related resource in which the described resource is physically or logically included.
+Relation between a component (e.g piece or part) and bigger Entity : System or Platform.</rdfs:comment>
+        <rdfs:label>isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent">
+        <owl:inverseOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>The DUL:hasPart relation without transitivity, holding between an Object (the system) and another (the component), and assuming a Design that structures the Object.
+
+A related resource that is included either physically or logically in the described resource.
+Relation between a Platform or System and its atomic Components (parts) .</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>The DUL:isPartOf relation without transitivity, holding between an Object (the system) and another (the component), and assuming a Design that structures the Object.
+A related resource in which the described resource is physically or logically included.
+Relation between a component (e.g piece or part) and grouping Entity : System or Platform.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventEffect"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventRecommandedAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Supports the association of a temporal entity (instant or interval) to any thing</rdfs:comment>
+        <rdfs:label>hasTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hosts -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hosts">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment>Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/isHostedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:comment>Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeBySensor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+        <rdfs:comment>Relation between an Observation and the Sensor which made the Observations.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/madeObservation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <rdfs:comment>Relation between a Sensor and an Observation made by the Sensor</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasSubSystem -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:comment>Relation between a System and its subsystems.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/member">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Indicates a member of a Group</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>member</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/accomplishes -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/accomplishes">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isAccomplishedBy"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A relationship between a certain entity (e.g., a device) and the task it accomplishes.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/consistsOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/consistsOf">
+        <rdfs:comment>A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/controlsProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/controlsProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A relationship specifying the property that can be controlled by a certain device</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasFunction -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasFunction">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment>A relationship identifying the function of a device</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isMeasurementOf"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasMeterReading -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeterReading">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/MeteringFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A relationship between a metering function and the measurement of the reading</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/isPropertyOf"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A relationship between a feature of interest and a property of that feature</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasSensingRange -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasSensingRange">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A relationship between a sensing function and a measurement identifying the range of a sensor detection.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasSensorType -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasSensorType">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasState -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasState">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relationship for identifying the state of a production equipment.
+A relationship identifying the type of state of a device.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasThresholdMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasThresholdMeasurement">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/EventFunction"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A relationship associated with an event function to notify that a certain threshold measurement has been exceeded</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isAccomplishedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isAccomplishedBy">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A relationship identifying an entity (e.g., a device) that can accomplish a task.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isControlledByDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isControlledByDevice">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relationship specifying the devices that can control a certain property</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredByDevice -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredByDevice">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relationship specifying the devices that can measure a certain property.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasurementOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isOfferedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isOfferedBy">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/offers"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relationship between a service and a device that offers the service</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isPropertyOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:comment>A relationship between a property and the feature of interest it belongs to</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/makesMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/measurementMadeBy"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/measurementMadeBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measurementMadeBy">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relation between a measurement and the device that made it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/measuresProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:comment>A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/offers -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/offers">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:comment>A relationship between a device and a service</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A relationship between a property and the measurements it relates to</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A relationship between a measurement and the property it relates to.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/represents -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/represents">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment>A relationship between a service and a function.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/contains -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/contains">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4bldg/isContainedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>A relation between a physical space and the objects located in such space.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/hasSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/hasSpace">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4bldg/isSpaceOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>Relation between a building or a building space and the spaces it can be divided into.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/isContainedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>A relation between an object and the physical space in which it is located.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/isSpaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/isSpaceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment>Relation between a building space and the building or building space it belongs to.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/belongsToCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4inma/belongsToCategory">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4inma/isCategoryOf"/>
+        <rdfs:comment>Link between an entity and its category</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasIRDI -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4inma/hasIRDI">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4inma/hasIdentifier"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4inma/IRDI"/>
+        <rdfs:comment>A relationship determining the  International Registration Data Identifier (IRDI)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4inma/hasIdentifier">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4inma/ID"/>
+        <rdfs:comment>link between an entity and its unique identifier.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasUUID -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4inma/hasUUID">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4inma/hasIdentifier"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4inma/UUID"/>
+        <rdfs:comment>A relationship determining the Universally Unique Identifier (UUID)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/isCategoryOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4inma/isCategoryOf">
+        <rdfs:comment>Link between a category and its associated entity</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/imo/IndustrialMaintenance#http://purl.org/dc/terms/type -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/imo/IndustrialMaintenance#http://purl.org/dc/terms/type">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The nature or genre of the resource.
+Classification of an Entity into groups according to some characteristics.
+Example :  Velocity pump, Gravity pump, Steam pump, Electrical pump, etc. are different types of pump.</rdfs:comment>
+        <rdfs:label>type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#designation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#designation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Designation of an Entity.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#function -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#function">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A process that an Entity (physical or digital) uses to complete a task.
+Example : Cutting, Data processing, pumping, etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasCriticality -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasCriticality">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+        <rdfs:comment>Indicates the importance level of a machine, Component or System in the industrial process and its impact (security, financial, etc.) on  the overall process.
+Example : given a one-to-five rating, 5 would indicate a critical machine or process.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasLocation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasLocation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The place or position that an Entity is in.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasSeverity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasSeverity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedShort"/>
+        <rdfs:comment>Degree of severity rating for an Issue. 
+Example : On a one-to-five scale, 1 is for low or insignificant. 5 for severe or critical.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>State or condition at a particular time of a given Platform, Component or System.
+Exemple : KO, UP, RUNNING, etc</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isPrimaryOrBackup -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isPrimaryOrBackup">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>B</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>P</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>For a server or bucked up process, &quot;P&quot; denotes the primary node and &quot;B&quot; the backup node.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasManufacturer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasManufacturer">
+        <rdfs:comment>A relationship identifying the manufacturer of an entity (e.g., device). The value is expected to be a string or a string with language tag.
+The Constructor of the machine or System.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasModel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasModel">
+        <rdfs:comment>A relationship identifying the model of an entity (e.g., device). The value is expected to be a string or a string with language tag.
+A model reference to distiguish between different generations of the same tools, machines with the same or a slightly different functions.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasTimestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp">
+        <rdfs:comment>A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+        <rdfs:comment>A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasIDValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasIDValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property.
+An unambiguous reference to the resource within a given context.
+A set of numbers, letters, or symbols that is used to represent uniquely an Entity or something.  
+ID are custom or business-level defined.</rdfs:comment>
+        <rdfs:label>hasIdentifierValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasIRDIValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasIRDIValue">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4inma/hasIDValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A relation to express the value of an IRDI as a string</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasModelNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasModelNumber">
+        <rdfs:comment>A relation to express the model number of a certain object (item, product, equipment, etc.)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasSerialNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasSerialNumber">
+        <rdfs:comment>A relation to describe the serial number of a certain Item, which is unique per Item.
+One of a set of numbers that is printed on Component, Physical System or Platform, etc. so that each has a different number and can be recognized.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasUUIDValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasUUIDValue">
+        <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4inma/hasIDValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A relation to express the value of an UUID as a string.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/hasVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4inma/hasVersion">
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An item has a certain revision or version number, whereas a higher number indicates a newer version.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#Event -->
+
+
+    <owl:Class rdf:about="http://purl.org/NET/c4dm/event.owl#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NET/c4dm/event.owl#place"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/NET/c4dm/event.owl#sub_event"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventEffect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventRecommandedAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#Factor -->
+
+
+    <owl:Class rdf:about="http://purl.org/NET/c4dm/event.owl#Factor">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>Everything used as a factor in an event (cause).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity -->
+
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity">
+        <rdfs:comment>An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary
+Platform, Component, System are example of Entities.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#API -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#API">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent"/>
+        <rdfs:comment>Application Programming Interface</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Accelerometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Accelerometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Administrator -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Administrator">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Alert -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Alert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Anemometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Anemometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AuthenticationModule -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AuthenticationModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AutoTestState -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AutoTestState">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TestState"/>
+        <rdfs:comment>AUTOTEST state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Barometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Barometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Breakage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Breakage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CloudPlatform -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CloudPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment>Atomic piece of infrastructure. One of the parts of a System, process, or Platform.
+Example : processor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Computer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Computer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CoolingSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CoolingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Crash -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Crash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CuttingFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#CuttingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DBMS -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DBMS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform"/>
+        <rdfs:comment>Database Management System Server.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataServerMachine -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataServerMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataSet -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Deactivation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Deactivation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Disconnection -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Disconnection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DisplaySystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DisplaySystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Driver -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Driver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ELearningPlatform -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ELearningPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Electrician -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Electrician">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecializedTechnician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Equipment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Equipment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EquipmentList -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EquipmentList">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument"/>
+        <rdfs:comment>All the materials and durable goods of the company must be inventoried, classified and codified in order to constitute a nomenclature. Such a nomenclature will facilitate the establishment of maintenance budgets, the establishment of preventive maintenance plans and more generally maintenance methods.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause"/>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventEffect -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventEffect"/>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventRecommandedAction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventRecommandedAction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fan -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#FormingFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#FormingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#GasSensor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#GasSensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gauge -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gauge">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#GeneralDocument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#GeneralDocument">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment>The service must have a general documentation service, updated regularly. This includes all the technical documents which are not assigned to specific equipment, but which are necessary for maintenance personnel to answer more general technical questions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Generator -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Generator">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Guest -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Guest">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gyroscope -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gyroscope">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HistoryFile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HistoryFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument"/>
+        <rdfs:comment>This is the part of the maintenance documentation that records failures, breakdowns and information relating to the maintenance of an asset. The history of a piece of equipment. It traces the life of the equipment by chronologically indicating all the key maintenance events as well as the improvements that have been made to the equipment since it was put into service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HumanFactor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HumanFactor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Factor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HybridSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HybridSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Hygrometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Hygrometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportEngineerL2 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportEngineerL2">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportEngineerL3 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportEngineerL3">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportTechnicianL1 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportTechnicianL1">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportTechnicianL2 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ITSupportTechnicianL2">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#InfraredDetector -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#InfraredDetector">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Instrument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Instrument">
+        <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JARArchive -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JARArchive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JPEGFile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JPEGFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JoiningFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#JoiningFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Keyboard -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Keyboard">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LaserTracker -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LaserTracker">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Magnetometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Magnetometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceManager -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceManager">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceOperator -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceOperator">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenancePlan -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenancePlan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument"/>
+        <rdfs:comment>It comes from the operational phase of the life cycle, the phase during which maintenance is carried out. It is therefore rich in information and it is up to each company to build it. The maintenance plan should only include what is strictly
+necessary for maintenance personnel in their daily activities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceSupervisor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceSupervisor">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceTechnician -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenanceTechnician">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Manometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Manometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Mechanic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Mechanic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecializedTechnician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Misadjustment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Misadjustment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Mouse -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Mouse">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#OperatingSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Oscillograph -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Oscillograph">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overconsumption -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overconsumption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overcurrent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overcurrent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overheating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overheating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overload -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overload">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overpressure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overpressure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overspeed -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overspeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overvoltage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overvoltage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Parameter -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Parameter">
+        <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Photometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Photometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalPlatform -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalServer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalServer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalSystem -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlainTextFile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlainTextFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerFailure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerFailure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerSupplier -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerSupplier">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PressureSwitch -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PressureSwitch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Probe -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Probe">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ProcessingFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ProcessingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Processor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Processor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Pump -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Pump">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PumpingFunction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PumpingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Radiation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Radiation">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Radiometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Radiometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Record -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Record">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RunningState -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RunningState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment>RUNNING state.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screen -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screw -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SizeProperty -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SizeProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>Physical size observable property.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Software -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Software">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Sonometer -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Sonometer">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Speaker -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Speaker">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment>It breaks down into four main parts:
+* The equipment nomenclature or inventory of the equipment park,
+* The technical equipment file,
+* The equipment maintenance plan,
+* The history file.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecializedTechnician -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecializedTechnician">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedProperty -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Starter -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Starter">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Stop -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Stop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Sub-contractor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Sub-contractor">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemFactor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemFactor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Factor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Alert"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Record"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>System reaction to an event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Team -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Team">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecialDocument"/>
+        <rdfs:comment>technical files is the first documentation from which all other technical files will be created. It is therefore the one that must be as complete as possible and that should be defined in the equipment purchasing specifications. Why ? Quite simply because you need to have this documentation
+as soon as the equipment arrives at the company to be installed there, and experience shows that if it does not arrive with it, there is little chance of recovering it. Indeed, such documentation is expensive for the supplier, and he will &quot;always drag his feet&quot; to do so.
+achieve as a whole. This source documentation must be part of the customer-supplier contractual requirements because it is the maintenance personnel who are most likely to suffer from the
+lack of documentation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TestState -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TestState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Thermocouple -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Thermocouple">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Timeout -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Timeout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Turbine -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Turbine">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Unavailability -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Unavailability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Underspeed -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Underspeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Valve -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Valve">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Actuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Vibration -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Vibration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#VirtualMachine -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#VirtualMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#WebServerMachine -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#WebServerMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ZIPArchive -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ZIPArchive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>A temporal entity with zero extent or duration</rdfs:comment>
+        <rdfs:label>TimeInstant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>A temporal entity with an extent or duration</rdfs:comment>
+        <rdfs:label>TimeInterval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Instant"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#Interval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A temporal interval or instant.</rdfs:comment>
+        <rdfs:label>TemporalEntity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Platform -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Platform is an entity that hosts other entities : components, systems or other platforms.
+Example : Server,  computer, etc.
+A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/System -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment>An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:label>Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:comment>A document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>A class of Agents.</rdfs:comment>
+        <rdfs:label>Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>An organization.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment>A person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/ActuatingFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/ActuatingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment>A function that allows to transmit data to actuators, such as level settings (e.g., temperature) or binary switching (e.g., open/close, on/off)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Actuator -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Actuator">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A device responsible for moving or controlling a mechanism or system by performing an actuating function</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Device -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Device">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/consistsOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/makesMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/offers"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/accomplishes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasManufacturer"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasModel"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/EnergyUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/EnergyUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>The unit of measure for energy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/EventFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/EventFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasThresholdMeasurement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A function that allows to notify about some relevant activity; e.g., that a certain threshold value has been exceeded or that some object has moved.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Function -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Function">
+        <rdfs:comment>The functionality necessary to accomplish the task for which a device is designed. A device can be designed to perform more than one function. Functions can be structured in categories (subclasses) that reflect different points of view, for example, considering the specific application area for which a function can be used (e.g., light, temperature, motion, heat, power, etc.), or the capability that a function can support (e.g., receive, reply, notify, etc.), and so forth.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/IlluminanceUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/IlluminanceUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>The unit of measure for light</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/LevelControlFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/LevelControlFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment>An actuating function that allows to do level adjustments of a property in a certain range (e.g., 0%-100%), such as dimming a light in a room or setting the speed of an electric motor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/LightSwitch -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/LightSwitch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Switch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/offers"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SwitchOnService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A switch that performs the saref:OnOffFunction, controls the property saref:Light, and can be found in the state saref:OnOffState. It can offer a switch on service. A saref:LightSwitch is typically used to accomplish saref:Lighting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Measurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasurementOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/MeteringFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/MeteringFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeterReading"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeterReading"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A function that allows to get data from a meter, such as current meter reading or instantaneous demand</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Motion -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Motion">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A saref:Property related to some measurements that are characterized by a certain value that is measured in a unit of measure for motion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/MultiLevelState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/MultiLevelState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment>A type of state</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OffState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OffState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+        <rdfs:comment>The state of a device that is Off</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnOffFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnOffFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment>An actuating function that allows to switch on and off an actuator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnOffState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnOffState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment>A type of state</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OnState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OnState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/OnOffState"/>
+        <rdfs:comment>The state of a device that is On</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/OpenCloseFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/OpenCloseFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment>An actuating function that allows to open and close a device</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/PowerUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/PowerUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>The unit of measure for power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/PressureUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/PressureUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>The unit of measure for pressure</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Property -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isControlledByDevice"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredByDevice"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isPropertyOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An aspect of an entity that can be observable by a sensor.
+A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SensingFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SensingFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasSensingRange"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasSensorType"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A function that allows to transmit data from sensors, such as measurement values (e.g., temperature) or sensing data (e.g., occupancy).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Sensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Sensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. Further, a device of category saref:Sensor that performs a saref:SensingFunction.
+
+Device, agent or software responding to a change in the environment and generate a result. Sensors can be hosted by Platforms.
+Alias : Instrument.
+Example :  Barometers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Service -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isOfferedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/represents"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service and the function(s) to be represented.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SmokeSensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SmokeSensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/EventFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A sensor that performs the saref:SensingFunction and the saref:EventFunction, and is used for the purpose of sensing a property of type saref:Smoke. A saref:SmokeSensor is typically used to saref:accomplish saref:Safety.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+        <rdfs:comment>The state of a device that is STARTED</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartStopFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartStopFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/ActuatingFunction"/>
+        <rdfs:comment>An actuating function that allows to start and stop a device</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StartStopState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StartStopState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/State"/>
+        <rdfs:comment>A type of state</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/State -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/State">
+        <rdfs:comment>The state in which a device can be found, e.g, ON/OFF/STANDBY, or ONLINE/OFFLINE. We propose here a list of states that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/StopState -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/StopState">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/StartStopState"/>
+        <rdfs:comment>The state of a device that is STOPPED</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Switch -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Switch">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Actuator"/>
+        <rdfs:comment>A device of category saref:Actuator that performs an actuating function of type saref:OnOffFunction or saref:OpenCloseFunction</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/SwitchOnService -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/SwitchOnService">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isOfferedBy"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/LightSwitch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/represents"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/OnOffFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A type of service that represents an on/off function to the network</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Task -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Task">
+        <rdfs:comment>The goal for which a device is designed (from a user perspective). For example, a washing machine is designed for the task of washing. We propose here a list of tasks that are relevant for the purpose of SAREF, but this list can be extended. Tasks can be accomplished by devices (saref:isAccomplishedBy).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/TemperatureSensor -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/SensingFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A sensor that is used for the purpose of sensing a property of type saref:Temperature. A saref:TemperatureSensor is typically used to saref:accomplish saref:Comfort.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/TemperatureUnit -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <rdfs:comment>The unit of measure for temperature</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+        <rdfs:comment>The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called &quot;watt&quot;. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Building -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Building">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4bldg/hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/BuildingSpace -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/BuildingSpace">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4bldg/contains"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4bldg/PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4bldg/hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4bldg/isSpaceOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://saref.etsi.org/saref4bldg/Building"/>
+                            <rdf:Description rdf:about="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An entity used to define the physical spaces of the building. A building space contains devices or building objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/PhysicalObject -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/PhysicalObject">
+        <rdfs:comment>Any Object that has a proper space region.  (Definition extracted from DUL ontology)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/Energy -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4ener/Energy">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A saref:Property related to some measurements that are characterized by a certain value measured in an energy unit (such as Kilowatt_Hour or Watt_hour). 
+
+saref:Energy : Energy type and value in a slot (i.e., Energy, EnergyMin, EnergyMax, EnergyStandardDeviation, EnergySkewness),</rdfs:comment>
+        <rdfs:label>EnergyProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/Power -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4ener/Power">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A saref:Property related to some measurements that are characterized by a certain value that is measured in a power unit (such as watt or kilowatt). 
+
+saref4ener:Power : Power type and value in a slot (i.e. power, powerMin, powerMax, powerExpectedValue, powerStandardDeviation, powerSkewness)</rdfs:comment>
+        <rdfs:label>PowerProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/LightProperty -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4envi/LightProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>An aspect of light that can be observable by a sensor.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ActualMeasurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ActualMeasurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4inma/Measurement"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4inma/ExpectedMeasurement"/>
+        <rdfs:comment>Describes whether the measurement is actually measured during the production process. Disjoint with ExpectedMeasurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/Area -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/Area">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+        <rdfs:comment>A subclass of s4bldg:BuildingSpace used to define the physical spaces of the building. According to IEC 62264, areas are physical, geographical or logical groupings of resources determined by the site. A site can be divided in areas, whereas areas contain work centers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ExpectedMeasurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ExpectedMeasurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4inma/Measurement"/>
+        <rdfs:comment>Describes whether the measurement is expected (i.e., planned before the production process). Disjoint with ActualMeasurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/Factory -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/Factory">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Building"/>
+        <rdfs:comment>A subclass of s4bldg:Building specialized for the purpose of SAREF4INMA, a factory represents one or more organizations sharing a definit mission, goals and objectives which provides an output such as a product (definition taken from IEC 62264). A factory can be divided in one or multiple sites.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ID -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ID">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/hasIDValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A unique identifier.</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/IRDI -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/IRDI">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4inma/ID"/>
+        <rdfs:comment>International Registration Data Identifier (IRDI) is based on the international standards ISO/IEC 11179-6, ISO 29002 and ISO 6532 and used in eCl@ss and the Asset Administration Shell as unique identifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/Measurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/Measurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:comment>A subclass of saref:Measurement that represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement. The saref4imna:Measurement can be linked to individual Batches or Items. Moreover, the Measurement can be an ExpectedMeasurement (i.e. the value which is planned) or the ActualMeasurement (i.e. the value measured during production), which enables to check for deviations between the planned and actual values.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ProductionEquipment -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ProductionEquipment">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/PhysicalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasFunction"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4inma/ProductionEquipmentFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasState"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/makesMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/belongsToCategory"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4inma/ProductionEquipmentCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4inma/ID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/hasIDValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A production equipment is a specialization of a saref:Device and s4bldg:PhysicalObject that can produce items in a manufacturing process. This class represents an individual production equipment device and includes their specification in terms of functions, states and services. Different types of machines can be defined under this class as needed, for example, LaserCuttingMachine (i.e., a type of production equipment to cut steel material), MillingMachine (i.e., to drill holes in steel material), MouldingMachine (i.e., to mold liquid material, such as iron or plastic, and let it harden in a certain shape), WeldingMachine (i.e., join parts of material, such as steel, together), etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ProductionEquipmentCategory -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ProductionEquipmentCategory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/isCategoryOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4inma/ProductionEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4inma/hasModelNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A ProductionEquipmentCategory represents a certain type of production equipment, which is generally static over time. More concretely, the ProductionEquipmentCategory represents a certain model and brand of a production equipment. Each ProductionEquipmentCategory can have multiple related ProductionEquipment, which represent the actual individual machines. Moreover, each ItemCategory can be produced by multiple ProductionEquipmentCategories.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/ProductionEquipmentFunction -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/ProductionEquipmentFunction">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Function"/>
+        <rdfs:comment>Functionallity neccessary to accomplish the task for which a production equipment is designed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/Site -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/Site">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/BuildingSpace"/>
+        <rdfs:comment>A subclass of s4bldg:BuildingSpace used to define the physical spaces of the building. According to IEC 62264, sites are identified physical, geographical, and/or logical component groupings of a manufacturing enterprise. A factory can be divided in sites, whereas sites can be divided areas</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/UUID -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/UUID">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4inma/ID"/>
+        <rdfs:comment>A universally unique identifier (UUID) is a 128-bit number used to identify items and is also known as: globally unique identifier (GUID). In its canonical textual representation, the sixteen octets of a UUID are represented as 32 hexadecimal (base 16) digits, displayed in five groups separated by hyphens, in the form 8-4-4-4-12 for a total of 36 characters (32 alphanumeric characters and four hyphens). UUID are documented in ISO/IEC 11578:1996 &quot;Information technology – Open Systems Interconnection – Remote Procedure Call (RPC)&quot; and in ITU-T Rec. X.667 | ISO/IEC 9834-8:2005.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4inma/WorkCenter -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4inma/WorkCenter">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4inma/ProductionEquipment"/>
+        <rdfs:comment>A subclass of s4inma:ProductionEquipment (and therefore of s4bld:PhysicalObject). It is an equipment element under an area in a role-based equipment hierarchy that performs production, storage or material movement (definition taken from IEC 62264). An Area contains work centers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty"/>
+        <rdfs:comment>Acceleration magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AverageSpeedMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AverageSpeedMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedProperty"/>
+        <rdfs:comment>Average speed magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Bandwidth -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Bandwidth">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Cooling -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Cooling">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A type of task for which a device is designed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataProcessing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataProcessing">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A type of task for which a device is designed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataStorage -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DataStorage">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A type of task for which a device is designed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EnergyNominal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EnergyNominal">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Energy"/>
+        <rdfs:comment>An individual representing the nominal operating energy property EnergyNominal.</rdfs:comment>
+        <rdfs:label>EnergyNominalValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ExpertReport -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ExpertReport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HistoryFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ImplementationManual -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ImplementationManual">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#IncidentReports -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#IncidentReports">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#HistoryFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#InstantaneousSpeedMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#InstantaneousSpeedMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedProperty"/>
+        <rdfs:comment>Instantaneous speed magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Length -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Length">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SizeProperty"/>
+        <rdfs:comment>An individual representing the property length.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LongitudinalAccelerationMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LongitudinalAccelerationMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty"/>
+        <rdfs:comment>X axis acceleration magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LubricationDiagram -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LubricationDiagram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Notice -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Notice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerNominal -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerNominal">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Power"/>
+        <rdfs:comment>An individual representing the power property Power nominal value.</rdfs:comment>
+        <rdfs:label>PowerNominalValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Printing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Printing">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Safety -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Safety">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A type of task for which a device is designed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ScoreCard -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ScoreCard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#MaintenancePlan"/>
+        <rdfs:comment>It is of course based on experience and progressive knowledge of the material. The first step is to score each piece of equipment according to different criteria. for example :
+- Technological complexity (simple, complex, sophisticated)
+- Complexity of operation (no training necessary, simple training, significant training)
+- Criticality in the process (unimportant, main, strategic)
+- Operating rate (low, intermittent, continuous)
+- Cost of production losses (inexpensive, expensive, very expensive)
+- Replacement value (inexpensive, expensive, very expensive)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpeedProperty"/>
+        <rdfs:comment>Speed magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalData -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalData">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TechnicalFiles"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TransversalAccelerationMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TransversalAccelerationMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty"/>
+        <rdfs:comment>Y axis acceleration magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Typing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Typing">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Versioning -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Versioning">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Task"/>
+        <rdfs:comment>A type of task for which a device is designed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#VerticalAccelerationMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#VerticalAccelerationMagnitude">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationProperty"/>
+        <rdfs:comment>Z axis acceleration magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Width -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Width">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SizeProperty"/>
+        <rdfs:comment>An individual representing the property width.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Humidity -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Humidity">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Pressure -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Pressure">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Smoke -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Smoke">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:label>SmokeDensity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/core/Temperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/core/Temperature">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/EnergyMax -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/EnergyMax">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Energy"/>
+        <rdfs:comment>An individual representing the maximum energy consumption property EnergyMax.</rdfs:comment>
+        <rdfs:label>EnergyMaxValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/EnergyMin -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/EnergyMin">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Energy"/>
+        <rdfs:comment>An individual representing the minimum energy consumption property EnergyMin.</rdfs:comment>
+        <rdfs:label>EnergyMinValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/EnergySkewness -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/EnergySkewness">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Energy"/>
+        <rdfs:comment>An individual representing the energy skewness property EnergySkewness.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/EnergyStandardDeviation -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/EnergyStandardDeviation">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Energy"/>
+        <rdfs:comment>An individual representing the energy standard deviation property EnergyStandardDeviation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/PowerMax -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/PowerMax">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Power"/>
+        <rdfs:comment>An individual representing the power property Power max value.</rdfs:comment>
+        <rdfs:label>PowerMaxValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/PowerMin -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/PowerMin">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Power"/>
+        <rdfs:comment>An individual representing the power property Power min value.</rdfs:comment>
+        <rdfs:label>PowerMinValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/PowerSkewness -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/PowerSkewness">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Power"/>
+        <rdfs:comment>An individual representing the power property Power skewness.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4ener/PowerStandardDeviation -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4ener/PowerStandardDeviation">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4ener/Power"/>
+        <rdfs:comment>An individual representing the power property Power standard deviation.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Fluorescence -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Fluorescence">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4envi/LightProperty"/>
+        <rdfs:comment>An individual representing the light property fluorescence.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Frequency">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>An individual representing the property frequency.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Height -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Height">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SizeProperty"/>
+        <rdfs:comment>An individual representing the property height.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/LightMagnitude -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/LightMagnitude">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4envi/LightProperty"/>
+        <rdfs:comment>An individual representing the light property light magnitude.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Luminiscence -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Luminiscence">
+        <rdf:type rdf:resource="https://saref.etsi.org/saref4envi/LightProperty"/>
+        <rdfs:comment>An individual representing the light property luminiscence.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4watr/Conductivity -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4watr/Conductivity">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>Property indicating material conductivity.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4watr/HydrogenIonConcentration -->
+
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4watr/HydrogenIonConcentration">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>Property of a solution indicating its hydrogen ion concentration.
+pH is a scale used to specify the acidity or basicity of an aqueous solution.</rdfs:comment>
+        <rdfs:label>pH</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:isDefinedBy>http://www.w3.org/ns/ssn/System</rdfs:isDefinedBy>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Breakage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Crash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Deactivation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Disconnection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Misadjustment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overconsumption"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overcurrent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overheating"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overload"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overpressure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overspeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overvoltage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Stop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Timeout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Underspeed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Vibration"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://saref.etsi.org/saref4inma/Area"/>
+            <rdf:Description rdf:about="https://saref.etsi.org/saref4inma/Site"/>
+            <rdf:Description rdf:about="https://saref.etsi.org/saref4inma/WorkCenter"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
