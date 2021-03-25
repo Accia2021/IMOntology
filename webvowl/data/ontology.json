@@ -6,7 +6,7 @@
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
     "version" : "1.0.0",
     "comments" : {
-      "undefined" : "The Industrial Maintenance Ontology IMO aims to model industrial maintenance concepts (predictive and corrective). This first part named \"Infrastructure\" covers structural concerns of the domain  (i.e, organization and composition) like relationship between elements of interest, physical or digital : Entities, Functions, Properties, etc. and some of their specialization.\nIt is reusing concepts from ontologies like Smart Applications REFerence Ontology SAREF and Semantic Sensor Network Ontology SSN."
+      "undefined" : "The Industrial Maintenance Ontology IMO aims to model industrial maintenance concepts (predictive and corrective). It covers three scopes : 1)Infrastructure, 2) Eventing with failure handling and 3)Resources. \nInfrastructure scope  handles structural concerns of the domain  (i.e, organization and composition) like relationship between elements of interest, physical or digital : Entities, Functions, Properties, etc. and some of their specialization. The Eventing scope covers Event concepts like Failures, Errors, Sensor, triggred alarms and related Diagnosis informations like Causes, Effects and Recommanded Actions.\nThird scopre covered by the ontology is Resources. It defines concepts like Documents, Procedures, Agents, etc.\nThe Ontology reuses concepts from widely used ontologies like Smart Applications REFerence Ontology SAREF, Semantic Sensor Network Ontology SSN, FOAF, etc."
     },
     "other" : {
       "versionInfo" : [ {
@@ -172,19 +172,19 @@
     "id" : "13",
     "type" : "owl:Class"
   }, {
+    "id" : "241",
+    "type" : "owl:Class"
+  }, {
     "id" : "242",
     "type" : "owl:Class"
   }, {
     "id" : "243",
     "type" : "owl:Class"
   }, {
-    "id" : "244",
-    "type" : "owl:Class"
-  }, {
     "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "245",
+    "id" : "244",
     "type" : "owl:Class"
   }, {
     "id" : "47",
@@ -193,10 +193,10 @@
     "id" : "83",
     "type" : "owl:Class"
   }, {
-    "id" : "234",
+    "id" : "233",
     "type" : "owl:Class"
   }, {
-    "id" : "264",
+    "id" : "262",
     "type" : "owl:Class"
   }, {
     "id" : "300",
@@ -223,7 +223,7 @@
     "id" : "360",
     "type" : "owl:Class"
   }, {
-    "id" : "228",
+    "id" : "227",
     "type" : "owl:Class"
   }, {
     "id" : "363",
@@ -238,16 +238,16 @@
     "id" : "115",
     "type" : "owl:Class"
   }, {
-    "id" : "241",
+    "id" : "231",
     "type" : "owl:Class"
   }, {
-    "id" : "277",
-    "type" : "owl:Class"
-  }, {
-    "id" : "382",
+    "id" : "276",
     "type" : "owl:Class"
   }, {
     "id" : "420",
+    "type" : "owl:Class"
+  }, {
+    "id" : "382",
     "type" : "owl:Class"
   }, {
     "id" : "422",
@@ -313,7 +313,7 @@
     "id" : "471",
     "type" : "owl:Class"
   }, {
-    "id" : "236",
+    "id" : "235",
     "type" : "owl:Class"
   }, {
     "id" : "480",
@@ -331,13 +331,13 @@
     "id" : "185",
     "type" : "owl:Class"
   }, {
-    "id" : "256",
-    "type" : "owl:Class"
-  }, {
-    "id" : "154",
+    "id" : "255",
     "type" : "owl:Class"
   }, {
     "id" : "509",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
     "type" : "owl:Class"
   }, {
     "id" : "127",
@@ -370,7 +370,7 @@
     "id" : "486",
     "type" : "owl:Class"
   }, {
-    "id" : "272",
+    "id" : "271",
     "type" : "owl:Class"
   }, {
     "id" : "562",
@@ -403,25 +403,25 @@
     "id" : "302",
     "type" : "owl:Class"
   }, {
-    "id" : "249",
-    "type" : "owl:Class"
-  }, {
-    "id" : "89",
+    "id" : "248",
     "type" : "owl:Class"
   }, {
     "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "255",
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "254",
     "type" : "owl:Class"
   }, {
     "id" : "60",
     "type" : "owl:Class"
   }, {
-    "id" : "262",
+    "id" : "260",
     "type" : "owl:Class"
   }, {
-    "id" : "229",
+    "id" : "228",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -445,10 +445,10 @@
     "id" : "297",
     "type" : "owl:Class"
   }, {
-    "id" : "252",
+    "id" : "251",
     "type" : "owl:Class"
   }, {
-    "id" : "258",
+    "id" : "257",
     "type" : "owl:Class"
   }, {
     "id" : "208",
@@ -466,7 +466,7 @@
     "id" : "333",
     "type" : "owl:Class"
   }, {
-    "id" : "247",
+    "id" : "246",
     "type" : "owl:Class"
   }, {
     "id" : "592",
@@ -529,7 +529,7 @@
     "id" : "414",
     "type" : "owl:Class"
   }, {
-    "id" : "269",
+    "id" : "268",
     "type" : "owl:Class"
   }, {
     "id" : "594",
@@ -550,10 +550,10 @@
     "id" : "189",
     "type" : "owl:Class"
   }, {
-    "id" : "401",
+    "id" : "203",
     "type" : "owl:Class"
   }, {
-    "id" : "203",
+    "id" : "401",
     "type" : "owl:Class"
   }, {
     "id" : "21",
@@ -574,7 +574,7 @@
     "id" : "53",
     "type" : "owl:Class"
   }, {
-    "id" : "602",
+    "id" : "600",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "356",
@@ -583,7 +583,7 @@
     "id" : "326",
     "type" : "owl:Class"
   }, {
-    "id" : "232",
+    "id" : "240",
     "type" : "owl:Class"
   }, {
     "id" : "534",
@@ -607,7 +607,7 @@
     "id" : "67",
     "type" : "owl:Class"
   }, {
-    "id" : "615",
+    "id" : "616",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "324",
@@ -631,22 +631,22 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "239",
+    "id" : "238",
     "type" : "owl:Class"
   }, {
-    "id" : "274",
-    "type" : "owl:Class"
-  }, {
-    "id" : "418",
+    "id" : "273",
     "type" : "owl:Class"
   }, {
     "id" : "143",
     "type" : "owl:Class"
   }, {
+    "id" : "418",
+    "type" : "owl:Class"
+  }, {
     "id" : "494",
     "type" : "owl:Class"
   }, {
-    "id" : "649",
+    "id" : "653",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "133",
@@ -706,7 +706,7 @@
     "id" : "50",
     "type" : "owl:Class"
   }, {
-    "id" : "267",
+    "id" : "266",
     "type" : "owl:Class"
   }, {
     "id" : "205",
@@ -1183,15 +1183,6 @@
         "IRI-based" : "DataStorage"
       }
     }, {
-      "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Versioning",
-      "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-      "comment" : {
-        "undefined" : "A type of task for which a device is designed"
-      },
-      "labels" : {
-        "IRI-based" : "Versioning"
-      }
-    }, {
       "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Cooling",
       "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
       "comment" : {
@@ -1199,6 +1190,15 @@
       },
       "labels" : {
         "IRI-based" : "Cooling"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Versioning",
+      "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+      "comment" : {
+        "undefined" : "A type of task for which a device is designed"
+      },
+      "labels" : {
+        "IRI-based" : "Versioning"
       }
     }, {
       "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Safety",
@@ -1258,7 +1258,7 @@
     },
     "subClasses" : [ "12", "19", "26", "35", "40" ],
     "id" : "13",
-    "superClasses" : [ "239" ]
+    "superClasses" : [ "238" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gyroscope",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -1266,7 +1266,7 @@
     "label" : {
       "IRI-based" : "Gyroscope"
     },
-    "id" : "242",
+    "id" : "241",
     "superClasses" : [ "220" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Sonometer",
@@ -1275,7 +1275,7 @@
     "label" : {
       "IRI-based" : "Sonometer"
     },
-    "id" : "243",
+    "id" : "242",
     "superClasses" : [ "220" ]
   }, {
     "iri" : "https://saref.etsi.org/core/OnState",
@@ -1288,7 +1288,7 @@
       "undefined" : "The state of a device that is On"
     },
     "attributes" : [ "external" ],
-    "id" : "244",
+    "id" : "243",
     "superClasses" : [ "177" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AuthenticationModule",
@@ -1306,7 +1306,7 @@
     "label" : {
       "IRI-based" : "InfraredDetector"
     },
-    "id" : "245",
+    "id" : "244",
     "superClasses" : [ "220" ]
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/ProductionEquipment",
@@ -1321,7 +1321,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "47",
-    "superClasses" : [ "50", "247" ]
+    "superClasses" : [ "246", "50" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -1343,7 +1343,7 @@
       "undefined" : "A subclass of saref:Measurement that represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement. The saref4imna:Measurement can be linked to individual Batches or Items. Moreover, the Measurement can be an ExpectedMeasurement (i.e. the value which is planned) or the ActualMeasurement (i.e. the value measured during production), which enables to check for deviations between the planned and actual values."
     },
     "attributes" : [ "external" ],
-    "id" : "234",
+    "id" : "233",
     "superClasses" : [ "57" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Generator",
@@ -1352,7 +1352,7 @@
     "label" : {
       "IRI-based" : "Generator"
     },
-    "id" : "264",
+    "id" : "262",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "https://saref.etsi.org/core/Motion",
@@ -1475,8 +1475,8 @@
     "label" : {
       "IRI-based" : "DisplaySystem"
     },
-    "id" : "228",
-    "superClasses" : [ "229" ]
+    "id" : "227",
+    "superClasses" : [ "228" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#TemporalEntity",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -1490,7 +1490,7 @@
     "comment" : {
       "undefined" : "A temporal interval or instant."
     },
-    "attributes" : [ "external", "union" ],
+    "attributes" : [ "union", "external" ],
     "id" : "363"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer",
@@ -1534,7 +1534,7 @@
       "undefined" : "A type of service that represents an on/off function to the network"
     },
     "attributes" : [ "external" ],
-    "id" : "241",
+    "id" : "231",
     "superClasses" : [ "217" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#GeneralDocument",
@@ -1546,17 +1546,8 @@
     "comment" : {
       "undefined" : "The service must have a general documentation service, updated regularly. This includes all the technical documents which are not assigned to specific equipment, but which are necessary for maintenance personnel to answer more general technical questions."
     },
-    "id" : "277",
-    "superClasses" : [ "272" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Valve",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Valve"
-    },
-    "id" : "382",
-    "superClasses" : [ "274" ]
+    "id" : "276",
+    "superClasses" : [ "271" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Thermocouple",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -1566,6 +1557,15 @@
     },
     "id" : "420",
     "superClasses" : [ "220" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Valve",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Valve"
+    },
+    "id" : "382",
+    "superClasses" : [ "273" ]
   }, {
     "iri" : "https://saref.etsi.org/core/IlluminanceUnit",
     "baseIri" : "https://saref.etsi.org/core",
@@ -1794,7 +1794,7 @@
     "label" : {
       "IRI-based" : "Entity"
     },
-    "subClasses" : [ "239", "125", "168", "138" ],
+    "subClasses" : [ "238", "125", "168", "138" ],
     "comment" : {
       "undefined" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary\nPlatform, Component, System are example of Entities."
     },
@@ -1807,7 +1807,7 @@
     "label" : {
       "IRI-based" : "ActuatingFunction"
     },
-    "subClasses" : [ "333", "341", "346", "351", "356", "308", "312", "232" ],
+    "subClasses" : [ "333", "341", "346", "351", "356", "308", "312", "240" ],
     "comment" : {
       "undefined" : "A function that allows to transmit data to actuators, such as level settings (e.g., temperature) or binary switching (e.g., open/close, on/off)"
     },
@@ -1849,7 +1849,7 @@
     "label" : {
       "IRI-based" : "Keyboard"
     },
-    "id" : "236",
+    "id" : "235",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "https://saref.etsi.org/core/StartState",
@@ -1947,7 +1947,7 @@
     "comment" : {
       "undefined" : "An aspect of an entity that can be observable by a sensor.\nA quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature."
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "51"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Barometer",
@@ -1974,21 +1974,12 @@
     "label" : {
       "IRI-based" : "Building"
     },
-    "subClasses" : [ "255" ],
+    "subClasses" : [ "254" ],
     "comment" : {
       "undefined" : "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."
     },
     "attributes" : [ "external" ],
-    "id" : "256"
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Fault"
-    },
-    "id" : "154",
-    "superClasses" : [ "53" ]
+    "id" : "255"
   }, {
     "iri" : "https://saref.etsi.org/core/EnergyUnit",
     "baseIri" : "https://saref.etsi.org/core",
@@ -2003,13 +1994,22 @@
     "id" : "509",
     "superClasses" : [ "58" ]
   }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fault"
+    },
+    "id" : "154",
+    "superClasses" : [ "53" ]
+  }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SpecializedTechnician",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
     "instances" : 0,
     "label" : {
       "IRI-based" : "SpecializedTechnician"
     },
-    "subClasses" : [ "262", "267" ],
+    "subClasses" : [ "260", "266" ],
     "id" : "127",
     "superClasses" : [ "67" ]
   }, {
@@ -2074,7 +2074,7 @@
       "IRI-based" : "Starter"
     },
     "id" : "378",
-    "superClasses" : [ "274" ]
+    "superClasses" : [ "273" ]
   }, {
     "iri" : "https://saref.etsi.org/core/TemperatureSensor",
     "baseIri" : "https://saref.etsi.org/core",
@@ -2113,12 +2113,12 @@
       "IRI-based" : "Document",
       "undefined" : "Document"
     },
-    "subClasses" : [ "189", "277" ],
+    "subClasses" : [ "189", "276" ],
     "comment" : {
       "undefined" : "A document."
     },
     "attributes" : [ "external" ],
-    "id" : "272"
+    "id" : "271"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventRecommandedAction",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2209,7 +2209,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "301",
-    "superClasses" : [ "234" ]
+    "superClasses" : [ "233" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Radiation",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2231,7 +2231,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "302",
-    "superClasses" : [ "234" ]
+    "superClasses" : [ "233" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2239,17 +2239,8 @@
     "label" : {
       "IRI-based" : "Camera"
     },
-    "id" : "249",
+    "id" : "248",
     "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overheating",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Overheating"
-    },
-    "id" : "89",
-    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ProcessingFunction",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2259,6 +2250,15 @@
     },
     "id" : "63",
     "superClasses" : [ "59" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Overheating",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Overheating"
+    },
+    "id" : "89",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/Factory",
     "baseIri" : "https://saref.etsi.org/saref4inma",
@@ -2270,8 +2270,8 @@
       "undefined" : "A subclass of s4bldg:Building specialized for the purpose of SAREF4INMA, a factory represents one or more organizations sharing a definit mission, goals and objectives which provides an output such as a product (definition taken from IEC 62264). A factory can be divided in one or multiple sites."
     },
     "attributes" : [ "external" ],
-    "id" : "255",
-    "superClasses" : [ "256" ]
+    "id" : "254",
+    "superClasses" : [ "255" ]
   }, {
     "iri" : "https://saref.etsi.org/core/MeteringFunction",
     "baseIri" : "https://saref.etsi.org/core",
@@ -2292,7 +2292,7 @@
     "label" : {
       "IRI-based" : "Mechanic"
     },
-    "id" : "262",
+    "id" : "260",
     "superClasses" : [ "127" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalSystem",
@@ -2301,8 +2301,8 @@
     "label" : {
       "IRI-based" : "PhysicalSystem"
     },
-    "subClasses" : [ "281", "228" ],
-    "id" : "229",
+    "subClasses" : [ "281", "227" ],
+    "id" : "228",
     "superClasses" : [ "138" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Vibration",
@@ -2360,7 +2360,7 @@
     "label" : {
       "IRI-based" : "Measurement"
     },
-    "subClasses" : [ "234" ],
+    "subClasses" : [ "233" ],
     "comment" : {
       "undefined" : "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."
     },
@@ -2382,7 +2382,7 @@
     "label" : {
       "IRI-based" : "Mouse"
     },
-    "id" : "252",
+    "id" : "251",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Computer",
@@ -2391,7 +2391,7 @@
     "label" : {
       "IRI-based" : "Computer"
     },
-    "id" : "258",
+    "id" : "257",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction",
@@ -2424,7 +2424,7 @@
       "IRI-based" : "CoolingSystem"
     },
     "id" : "281",
-    "superClasses" : [ "229" ]
+    "superClasses" : [ "228" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BinaryFile",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2460,7 +2460,7 @@
       "undefined" : "Any Object that has a proper space region.  (Definition extracted from DUL ontology)"
     },
     "attributes" : [ "external" ],
-    "id" : "247"
+    "id" : "246"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/ProductionEquipmentCategory",
     "baseIri" : "https://saref.etsi.org/saref4inma",
@@ -2576,7 +2576,7 @@
     "label" : {
       "IRI-based" : "System"
     },
-    "subClasses" : [ "229", "50", "158", "471" ],
+    "subClasses" : [ "228", "50", "158", "471" ],
     "comment" : {
       "undefined" : "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."
     },
@@ -2590,11 +2590,11 @@
     "label" : {
       "IRI-based" : "Sensor"
     },
-    "subClasses" : [ "343", "242", "587", "243", "597", "596", "420", "440", "520", "522", "245", "525", "505", "445", "219", "530", "486", "489", "404", "494", "496" ],
+    "subClasses" : [ "343", "241", "587", "242", "597", "596", "420", "440", "520", "522", "244", "525", "505", "445", "219", "530", "486", "489", "404", "494", "496" ],
     "comment" : {
       "undefined" : "A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. Further, a device of category saref:Sensor that performs a saref:SensingFunction.\n\nDevice, agent or software responding to a change in the environment and generate a result. Sensors can be hosted by Platforms.\nAlias : Instrument.\nExample :  Barometers."
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "220",
     "superClasses" : [ "50" ]
   }, {
@@ -2665,7 +2665,7 @@
     "comment" : {
       "undefined" : "Everything used as a factor in an event (cause)."
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "182"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/ProductionEquipmentFunction",
@@ -2708,7 +2708,7 @@
     "label" : {
       "IRI-based" : "Speaker"
     },
-    "id" : "269",
+    "id" : "268",
     "superClasses" : [ "50" ]
   }, {
     "iri" : "https://saref.etsi.org/core/TemperatureUnit",
@@ -2825,7 +2825,17 @@
       "undefined" : "It breaks down into four main parts:\n* The equipment nomenclature or inventory of the equipment park,\n* The technical equipment file,\n* The equipment maintenance plan,\n* The history file."
     },
     "id" : "189",
-    "superClasses" : [ "272" ]
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TestState",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TestState"
+    },
+    "subClasses" : [ "202" ],
+    "id" : "203",
+    "superClasses" : [ "178" ]
   }, {
     "iri" : "http://www.w3.org/2006/time#Interval",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -2840,16 +2850,6 @@
     "attributes" : [ "external" ],
     "id" : "401",
     "superClasses" : [ "363" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TestState",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TestState"
-    },
-    "subClasses" : [ "202" ],
-    "id" : "203",
-    "superClasses" : [ "178" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Unavailability",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -2913,7 +2913,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "602",
+    "id" : "600",
     "label" : {
       "IRI-based" : "string"
     }
@@ -2946,7 +2946,7 @@
       "undefined" : "An actuating function that allows to switch on and off an actuator"
     },
     "attributes" : [ "external" ],
-    "id" : "232",
+    "id" : "240",
     "superClasses" : [ "64" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -2987,15 +2987,6 @@
       "IRI-based" : "AccelerationProperty"
     },
     "individuals" : [ {
-      "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationMagnitude",
-      "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-      "comment" : {
-        "undefined" : "Acceleration magnitude."
-      },
-      "labels" : {
-        "IRI-based" : "AccelerationMagnitude"
-      }
-    }, {
       "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#TransversalAccelerationMagnitude",
       "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
       "comment" : {
@@ -3003,6 +2994,15 @@
       },
       "labels" : {
         "IRI-based" : "TransversalAccelerationMagnitude"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#AccelerationMagnitude",
+      "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+      "comment" : {
+        "undefined" : "Acceleration magnitude."
+      },
+      "labels" : {
+        "IRI-based" : "AccelerationMagnitude"
       }
     }, {
       "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#LongitudinalAccelerationMagnitude",
@@ -3064,7 +3064,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "615",
+    "id" : "616",
     "label" : {
       "IRI-based" : "string"
     }
@@ -3131,7 +3131,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "76",
-    "superClasses" : [ "274" ]
+    "superClasses" : [ "273" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PumpingFunction",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -3180,7 +3180,7 @@
     "comment" : {
       "undefined" : "Atomic piece of infrastructure. One of the parts of a System, process, or Platform.\nExample : processor."
     },
-    "id" : "239",
+    "id" : "238",
     "superClasses" : [ "169" ]
   }, {
     "iri" : "https://saref.etsi.org/core/Actuator",
@@ -3194,17 +3194,8 @@
       "undefined" : "A device responsible for moving or controlling a mechanism or system by performing an actuating function"
     },
     "attributes" : [ "external" ],
-    "id" : "274",
+    "id" : "273",
     "superClasses" : [ "50" ]
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Disconnection",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Disconnection"
-    },
-    "id" : "418",
-    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -3214,6 +3205,15 @@
     },
     "id" : "143",
     "superClasses" : [ "53" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Disconnection",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Disconnection"
+    },
+    "id" : "418",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Gauge",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -3226,7 +3226,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "649",
+    "id" : "653",
     "label" : {
       "IRI-based" : "dateTime"
     }
@@ -3337,7 +3337,7 @@
     },
     "subClasses" : [ "335", "166", "348", "353" ],
     "id" : "167",
-    "superClasses" : [ "239" ]
+    "superClasses" : [ "238" ]
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/BuildingSpace",
     "baseIri" : "https://saref.etsi.org/saref4bldg",
@@ -3358,7 +3358,7 @@
     "label" : {
       "IRI-based" : "OnOffState"
     },
-    "subClasses" : [ "314", "244" ],
+    "subClasses" : [ "314", "243" ],
     "comment" : {
       "undefined" : "A type of state"
     },
@@ -3372,7 +3372,7 @@
     "label" : {
       "IRI-based" : "Service"
     },
-    "subClasses" : [ "241" ],
+    "subClasses" : [ "231" ],
     "comment" : {
       "undefined" : "A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service and the function(s) to be represented."
     },
@@ -3468,7 +3468,7 @@
     "label" : {
       "IRI-based" : "Device"
     },
-    "subClasses" : [ "85", "292", "297", "249", "252", "258", "264", "269", "274", "220", "283", "47", "236", "452" ],
+    "subClasses" : [ "85", "292", "297", "248", "251", "257", "262", "268", "273", "220", "283", "47", "235", "452" ],
     "comment" : {
       "undefined" : "A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function."
     },
@@ -3482,7 +3482,7 @@
     "label" : {
       "IRI-based" : "Electrician"
     },
-    "id" : "267",
+    "id" : "266",
     "superClasses" : [ "127" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Group",
@@ -3808,88 +3808,88 @@
     "id" : "225",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "227",
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "230",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "231",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "233",
+    "id" : "232",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "235",
+    "id" : "234",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "237",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "238",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "240",
+    "id" : "239",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "246",
+    "id" : "245",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "248",
+    "id" : "247",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "249",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "250",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "251",
-    "type" : "rdfs:SubClassOf"
+    "id" : "252",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "253",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "258",
     "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "254",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "257",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "259",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "261",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "263",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "269",
     "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "266",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "268",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "270",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "272",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "274",
     "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "271",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "273",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "275",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "276",
+    "id" : "277",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "278",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "279",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "280",
@@ -3946,7 +3946,7 @@
     "id" : "309",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "226",
+    "id" : "279",
     "type" : "owl:objectProperty"
   }, {
     "id" : "310",
@@ -4189,7 +4189,7 @@
     "id" : "423",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "424",
+    "id" : "425",
     "type" : "owl:objectProperty"
   }, {
     "id" : "426",
@@ -4600,7 +4600,7 @@
     "id" : "593",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "425",
+    "id" : "424",
     "type" : "owl:objectProperty"
   }, {
     "id" : "580",
@@ -4624,10 +4624,10 @@
     "id" : "599",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "600",
+    "id" : "601",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "601",
+    "id" : "602",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "603",
@@ -4636,11 +4636,8 @@
     "id" : "604",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "605",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "606",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "607",
     "type" : "owl:allValuesFrom"
@@ -4652,7 +4649,7 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "610",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "611",
     "type" : "owl:disjointWith"
@@ -4664,9 +4661,12 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "614",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "615",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "616",
+    "id" : "617",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "618",
@@ -4691,13 +4691,13 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "624",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "625",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "626",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "627",
     "type" : "rdfs:SubClassOf"
@@ -4771,8 +4771,11 @@
     "id" : "648",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "650",
+    "id" : "649",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "650",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "651",
     "type" : "rdfs:SubClassOf"
@@ -4780,11 +4783,8 @@
     "id" : "652",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "653",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "654",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "655",
     "type" : "rdfs:SubClassOf"
@@ -4816,7 +4816,7 @@
     "id" : "664",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "260",
+    "id" : "264",
     "type" : "owl:objectProperty"
   }, {
     "id" : "665",
@@ -4861,62 +4861,62 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "3"
   }, {
     "range" : "8",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "6"
   }, {
     "range" : "10",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "9"
   }, {
     "range" : "13",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "11"
   }, {
     "range" : "8",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "range" : "17",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "16"
   }, {
     "range" : "13",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
     "range" : "8",
     "domain" : "21",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "20"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "range" : "13",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "range" : "8",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#function",
@@ -4934,47 +4934,47 @@
   }, {
     "range" : "33",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "range" : "13",
     "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "8",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "range" : "15",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "range" : "13",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "8",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "44",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "47",
     "domain" : "46",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "2",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "iri" : "https://saref.etsi.org/core/controlsProperty",
@@ -4987,7 +4987,7 @@
     "comment" : {
       "undefined" : "A relationship specifying the property that can be controlled by a certain device"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "49"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#agent",
@@ -5002,7 +5002,7 @@
     "comment" : {
       "undefined" : "Relates an event to an active agent (a person, a computer, ... )"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "52"
   }, {
     "iri" : "https://saref.etsi.org/core/isMeasuredIn",
@@ -5015,7 +5015,7 @@
     "comment" : {
       "undefined" : "A relationship identifying the unit of measure used for a certain entity."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "56"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -5026,157 +5026,157 @@
     },
     "domain" : "30",
     "subproperty" : [ "55" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "68"
   }, {
     "range" : "67",
     "domain" : "71",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "70"
   }, {
     "range" : "35",
     "domain" : "73",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "72"
   }, {
     "range" : "76",
     "domain" : "75",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "74"
   }, {
     "range" : "15",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "77"
   }, {
     "range" : "35",
     "domain" : "79",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "78"
   }, {
     "range" : "8",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "80"
   }, {
     "range" : "44",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "81"
   }, {
     "range" : "5",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
     "range" : "8",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "84"
   }, {
     "range" : "33",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
     "range" : "59",
     "domain" : "60",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "90"
   }, {
     "range" : "67",
     "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "91"
   }, {
     "range" : "15",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "92"
   }, {
     "range" : "59",
     "domain" : "61",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
     "range" : "67",
     "domain" : "95",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
     "range" : "44",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
     "range" : "59",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
     "range" : "67",
     "domain" : "99",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "98"
   }, {
     "range" : "2",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "100"
   }, {
     "range" : "59",
     "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "101"
   }, {
     "range" : "67",
     "domain" : "103",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "102"
   }, {
     "range" : "10",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "104"
   }, {
     "range" : "59",
     "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
     "range" : "67",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "17",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "108"
   }, {
     "range" : "59",
     "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "109"
   }, {
     "range" : "67",
     "domain" : "111",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "110"
   }, {
     "range" : "23",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "112"
   }, {
     "range" : "85",
     "domain" : "86",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
     "range" : "67",
     "domain" : "115",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "114"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#designation",
@@ -5194,17 +5194,17 @@
   }, {
     "range" : "24",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "118"
   }, {
     "range" : "85",
     "domain" : "87",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "119"
   }, {
     "range" : "33",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "122"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
@@ -5225,12 +5225,12 @@
     "comment" : {
       "undefined" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "123"
   }, {
     "range" : "67",
     "domain" : "127",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "126"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/hasSpace",
@@ -5244,12 +5244,12 @@
     "comment" : {
       "undefined" : "Relation between a building or a building space and the spaces it can be divided into."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "object", "external", "transitive" ],
     "id" : "128"
   }, {
     "range" : "67",
     "domain" : "133",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "132"
   }, {
     "iri" : "https://saref.etsi.org/core/isMeasurementOf",
@@ -5259,57 +5259,57 @@
       "IRI-based" : "isMeasurementOf"
     },
     "domain" : "57",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "134"
   }, {
     "range" : "24",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "136"
   }, {
     "range" : "67",
     "domain" : "140",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
     "range" : "53",
     "domain" : "143",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "142"
   }, {
     "range" : "53",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "145"
   }, {
     "range" : "53",
     "domain" : "148",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "147"
   }, {
     "range" : "53",
     "domain" : "151",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "150"
   }, {
     "range" : "53",
     "domain" : "154",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "153"
   }, {
     "range" : "158",
     "domain" : "157",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "156"
   }, {
     "range" : "158",
     "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "160"
   }, {
     "range" : "67",
     "domain" : "163",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "162"
   }, {
     "iri" : "https://saref.etsi.org/core/hasSensingRange",
@@ -5322,62 +5322,62 @@
     "comment" : {
       "undefined" : "A relationship between a sensing function and a measurement identifying the range of a sensor detection."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "170"
   }, {
     "range" : "54",
     "domain" : "172",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "171"
   }, {
     "range" : "54",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   }, {
     "range" : "178",
     "domain" : "177",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "176"
   }, {
     "range" : "182",
     "domain" : "181",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "180"
   }, {
     "range" : "182",
     "domain" : "185",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "184"
   }, {
     "range" : "189",
     "domain" : "188",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "187"
   }, {
     "range" : "189",
     "domain" : "192",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "191"
   }, {
     "range" : "189",
     "domain" : "196",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "195"
   }, {
     "range" : "189",
     "domain" : "199",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "198"
   }, {
     "range" : "203",
     "domain" : "202",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "201"
   }, {
     "range" : "54",
     "domain" : "205",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "204"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect",
@@ -5417,7 +5417,7 @@
     "comment" : {
       "undefined" : "Relates an event to a passive factor (a tool, an instrument, an abstract cause...)"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "211"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
@@ -5441,60 +5441,57 @@
     "comment" : {
       "undefined" : "A relationship between a service and a device that offers the service"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "216"
   }, {
     "range" : "178",
     "domain" : "203",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "224"
   }, {
-    "iri" : "https://saref.etsi.org/core/hasProperty",
-    "inverse" : "226",
+    "iri" : "https://saref.etsi.org/core/hasMeasurement",
+    "inverse" : "134",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "51",
+    "range" : "57",
     "label" : {
-      "IRI-based" : "hasProperty"
+      "IRI-based" : "hasMeasurement"
     },
     "domain" : "135",
-    "comment" : {
-      "undefined" : "A relationship between a feature of interest and a property of that feature"
-    },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "225"
   }, {
-    "range" : "229",
-    "domain" : "228",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "227"
+    "range" : "228",
+    "domain" : "227",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
   }, {
     "range" : "50",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "230"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
   }, {
-    "iri" : "https://saref.etsi.org/core/hasFunction",
+    "iri" : "https://saref.etsi.org/core/offers",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "232",
+    "range" : "231",
     "label" : {
-      "IRI-based" : "hasFunction"
+      "IRI-based" : "offers"
     },
     "domain" : "75",
     "comment" : {
-      "undefined" : "A relationship identifying the function of a device"
+      "undefined" : "A relationship between a device and a service"
     },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "231"
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "230"
   }, {
     "range" : "57",
-    "domain" : "234",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "233"
+    "domain" : "233",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
   }, {
     "range" : "50",
-    "domain" : "236",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "235"
+    "domain" : "235",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
   }, {
     "iri" : "https://saref.etsi.org/core/hasState",
     "baseIri" : "https://saref.etsi.org/core",
@@ -5506,26 +5503,26 @@
     "comment" : {
       "undefined" : "A relationship for identifying the state of a production equipment.\nA relationship identifying the type of state of a device."
     },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "237"
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "236"
   }, {
     "range" : "208",
     "domain" : "207",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "238"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
   }, {
-    "iri" : "https://saref.etsi.org/core/offers",
+    "iri" : "https://saref.etsi.org/core/hasFunction",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "241",
+    "range" : "240",
     "label" : {
-      "IRI-based" : "offers"
+      "IRI-based" : "hasFunction"
     },
     "domain" : "75",
     "comment" : {
-      "undefined" : "A relationship between a device and a service"
+      "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "240"
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "239"
   }, {
     "iri" : "https://saref.etsi.org/core/hasSensorType",
     "baseIri" : "https://saref.etsi.org/core",
@@ -5537,70 +5534,23 @@
     "comment" : {
       "undefined" : "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.)"
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "246"
+    "attributes" : [ "object", "external" ],
+    "id" : "245"
   }, {
     "range" : "50",
-    "domain" : "249",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "248"
+    "domain" : "248",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
   }, {
     "range" : "51",
     "domain" : "69",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "50",
+    "domain" : "251",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "250"
-  }, {
-    "range" : "50",
-    "domain" : "252",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "251"
-  }, {
-    "iri" : "https://saref.etsi.org/core/measuresProperty",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "51",
-    "label" : {
-      "IRI-based" : "measuresProperty"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "A relationship specifying the property that can be measured by a certain device"
-    },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "253"
-  }, {
-    "range" : "256",
-    "domain" : "255",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "254"
-  }, {
-    "range" : "50",
-    "domain" : "258",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "257"
-  }, {
-    "iri" : "https://saref.etsi.org/core/makesMeasurement",
-    "inverse" : "260",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "57",
-    "label" : {
-      "IRI-based" : "makesMeasurement"
-    },
-    "domain" : "50",
-    "comment" : {
-      "undefined" : "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."
-    },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "259"
-  }, {
-    "range" : "127",
-    "domain" : "262",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "261"
-  }, {
-    "range" : "50",
-    "domain" : "264",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "263"
   }, {
     "iri" : "https://saref.etsi.org/core/consistsOf",
     "baseIri" : "https://saref.etsi.org/core",
@@ -5612,18 +5562,18 @@
     "comment" : {
       "undefined" : "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "265"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "252"
   }, {
-    "range" : "127",
-    "domain" : "267",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "266"
+    "range" : "255",
+    "domain" : "254",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
   }, {
     "range" : "50",
-    "domain" : "269",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "268"
+    "domain" : "257",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
   }, {
     "iri" : "https://saref.etsi.org/core/hasState",
     "baseIri" : "https://saref.etsi.org/core",
@@ -5635,18 +5585,42 @@
     "comment" : {
       "undefined" : "A relationship for identifying the state of a production equipment.\nA relationship identifying the type of state of a device."
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "270"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "258"
   }, {
-    "range" : "272",
-    "domain" : "189",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "271"
+    "range" : "127",
+    "domain" : "260",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
   }, {
     "range" : "50",
-    "domain" : "274",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "273"
+    "domain" : "262",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "iri" : "https://saref.etsi.org/core/makesMeasurement",
+    "inverse" : "264",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "makesMeasurement"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "263"
+  }, {
+    "range" : "127",
+    "domain" : "266",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "50",
+    "domain" : "268",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "267"
   }, {
     "iri" : "https://saref.etsi.org/core/offers",
     "baseIri" : "https://saref.etsi.org/core",
@@ -5658,38 +5632,64 @@
     "comment" : {
       "undefined" : "A relationship between a device and a service"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "275"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "269"
   }, {
-    "range" : "272",
-    "domain" : "277",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "276"
+    "range" : "271",
+    "domain" : "189",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "270"
+  }, {
+    "range" : "50",
+    "domain" : "273",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "iri" : "https://saref.etsi.org/core/measuresProperty",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "measuresProperty"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "A relationship specifying the property that can be measured by a certain device"
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "274"
+  }, {
+    "range" : "271",
+    "domain" : "276",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "275"
   }, {
     "range" : "50",
     "domain" : "220",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "278"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "277"
   }, {
-    "iri" : "https://saref.etsi.org/core/hasMeasurement",
-    "inverse" : "134",
+    "iri" : "https://saref.etsi.org/core/hasProperty",
+    "inverse" : "279",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "57",
+    "range" : "51",
     "label" : {
-      "IRI-based" : "hasMeasurement"
+      "IRI-based" : "hasProperty"
     },
     "domain" : "135",
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "279"
+    "comment" : {
+      "undefined" : "A relationship between a feature of interest and a property of that feature"
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "278"
   }, {
-    "range" : "229",
+    "range" : "228",
     "domain" : "281",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "280"
   }, {
     "range" : "50",
     "domain" : "283",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "282"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
@@ -5710,17 +5710,17 @@
     "comment" : {
       "undefined" : "Relation between a System and its subsystems."
     },
-    "attributes" : [ "transitive", "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues", "transitive" ],
     "id" : "284"
   }, {
     "range" : "51",
     "domain" : "286",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "285"
   }, {
     "range" : "50",
     "domain" : "85",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "287"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
@@ -5741,42 +5741,42 @@
     "comment" : {
       "undefined" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "288"
   }, {
     "range" : "51",
     "domain" : "290",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "289"
   }, {
     "range" : "50",
     "domain" : "292",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "291"
   }, {
     "range" : "172",
-    "domain" : "272",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "293"
   }, {
     "range" : "51",
     "domain" : "295",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "294"
   }, {
     "range" : "50",
     "domain" : "297",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "296"
   }, {
     "range" : "67",
     "domain" : "172",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "298"
   }, {
     "range" : "51",
     "domain" : "300",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "299"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -5785,15 +5785,15 @@
     "label" : {
       "IRI-based" : "hasFunction"
     },
-    "domain" : "274",
+    "domain" : "273",
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "303"
   }, {
     "iri" : "https://saref.etsi.org/core/makesMeasurement",
-    "inverse" : "260",
+    "inverse" : "264",
     "baseIri" : "https://saref.etsi.org/core",
     "range" : "57",
     "label" : {
@@ -5803,22 +5803,22 @@
     "comment" : {
       "undefined" : "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "304"
   }, {
     "range" : "223",
     "domain" : "306",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "305"
   }, {
     "range" : "64",
     "domain" : "308",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "307"
   }, {
     "range" : "223",
     "domain" : "222",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "309"
   }, {
     "iri" : "https://saref.etsi.org/core/isPropertyOf",
@@ -5831,52 +5831,52 @@
     "comment" : {
       "undefined" : "A relationship between a property and the feature of interest it belongs to"
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "226"
+    "attributes" : [ "object", "external" ],
+    "id" : "279"
   }, {
     "range" : "10",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "310"
   }, {
     "range" : "64",
     "domain" : "312",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "311"
   }, {
     "range" : "177",
     "domain" : "314",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "313"
   }, {
     "range" : "17",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "315"
   }, {
     "range" : "64",
-    "domain" : "232",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "240",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "316"
   }, {
     "range" : "177",
-    "domain" : "244",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "243",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "317"
   }, {
     "range" : "17",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "318"
   }, {
     "range" : "51",
     "domain" : "320",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "319"
   }, {
     "range" : "217",
-    "domain" : "241",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "231",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "321"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hosts",
@@ -5898,17 +5898,17 @@
     "comment" : {
       "undefined" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "322"
   }, {
     "range" : "51",
     "domain" : "324",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "323"
   }, {
     "range" : "125",
     "domain" : "326",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "325"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
@@ -5929,92 +5929,92 @@
     "comment" : {
       "undefined" : "Relation between a System and its subsystems."
     },
-    "attributes" : [ "transitive", "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues", "transitive" ],
     "id" : "327"
   }, {
     "range" : "51",
     "domain" : "329",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "328"
   }, {
     "range" : "125",
     "domain" : "213",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "330"
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "331"
   }, {
     "range" : "64",
     "domain" : "333",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "332"
   }, {
     "range" : "167",
     "domain" : "335",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "334"
   }, {
     "range" : "10",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "339"
   }, {
     "range" : "64",
     "domain" : "341",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "340"
   }, {
     "range" : "167",
     "domain" : "166",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "342"
   }, {
     "range" : "17",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "344"
   }, {
     "range" : "64",
     "domain" : "346",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "345"
   }, {
     "range" : "167",
     "domain" : "348",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "347"
   }, {
     "range" : "2",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "349"
   }, {
     "range" : "64",
     "domain" : "351",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "350"
   }, {
     "range" : "167",
     "domain" : "353",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "352"
   }, {
     "range" : "10",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "354"
   }, {
     "range" : "64",
     "domain" : "356",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "355"
   }, {
     "range" : "17",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "357"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isComponentOf",
@@ -6027,172 +6027,172 @@
     "comment" : {
       "undefined" : "The DUL:isPartOf relation without transitivity, holding between an Object (the system) and another (the component), and assuming a Design that structures the Object.\nA related resource in which the described resource is physically or logically included.\nRelation between a component (e.g piece or part) and grouping Entity : System or Platform."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "358"
   }, {
     "range" : "8",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "359"
   }, {
     "range" : "363",
     "domain" : "362",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "361"
   }, {
-    "range" : "239",
+    "range" : "238",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "364"
   }, {
     "range" : "2",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "365"
   }, {
     "range" : "169",
-    "domain" : "239",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "238",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "366"
   }, {
-    "range" : "239",
+    "range" : "238",
     "domain" : "167",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "367"
   }, {
     "range" : "10",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "368"
   }, {
     "range" : "169",
     "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "369"
   }, {
-    "range" : "274",
+    "range" : "273",
     "domain" : "76",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "370"
   }, {
     "range" : "17",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "375"
   }, {
     "range" : "169",
     "domain" : "168",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "376"
   }, {
-    "range" : "274",
+    "range" : "273",
     "domain" : "378",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "377"
   }, {
     "range" : "44",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "379"
   }, {
     "range" : "169",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "380"
   }, {
-    "range" : "274",
+    "range" : "273",
     "domain" : "382",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "381"
   }, {
     "range" : "15",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "383"
   }, {
     "range" : "213",
     "domain" : "371",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "384"
   }, {
     "range" : "8",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "385"
   }, {
     "range" : "44",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "386"
   }, {
     "range" : "213",
     "domain" : "212",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "387"
   }, {
     "range" : "8",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "388"
   }, {
     "range" : "2",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "389"
   }, {
     "range" : "213",
     "domain" : "372",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "390"
   }, {
     "range" : "8",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "391"
   }, {
     "range" : "10",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "392"
   }, {
     "range" : "213",
     "domain" : "373",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "393"
   }, {
     "range" : "8",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "394"
   }, {
     "range" : "17",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "395"
   }, {
     "range" : "213",
     "domain" : "374",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "396"
   }, {
     "range" : "8",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "397"
   }, {
     "range" : "15",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "399"
   }, {
     "range" : "363",
     "domain" : "401",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "400"
   }, {
     "range" : "44",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "402"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasIRDIValue",
@@ -6210,67 +6210,67 @@
   }, {
     "range" : "8",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "405"
   }, {
-    "range" : "234",
+    "range" : "233",
     "domain" : "301",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "406"
   }, {
     "range" : "8",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "407"
   }, {
     "range" : "10",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "408"
   }, {
-    "range" : "234",
+    "range" : "233",
     "domain" : "302",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "409"
   }, {
     "range" : "8",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "410"
   }, {
     "range" : "17",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "411"
   }, {
     "range" : "336",
     "domain" : "337",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "412"
   }, {
     "range" : "8",
     "domain" : "414",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "413"
   }, {
     "range" : "33",
     "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "415"
   }, {
     "range" : "336",
     "domain" : "338",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "416"
   }, {
     "range" : "8",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "417"
   }, {
     "range" : "23",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "419"
   }, {
     "iri" : "https://saref.etsi.org/core/measuresProperty",
@@ -6283,8 +6283,22 @@
     "comment" : {
       "undefined" : "A relationship specifying the property that can be measured by a certain device"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "421"
+  }, {
+    "iri" : "https://saref.etsi.org/saref4inma/hasUUID",
+    "baseIri" : "https://saref.etsi.org/saref4inma",
+    "range" : "338",
+    "label" : {
+      "IRI-based" : "hasUUID"
+    },
+    "superproperty" : [ "424" ],
+    "domain" : "169",
+    "comment" : {
+      "undefined" : "A relationship determining the Universally Unique Identifier (UUID)"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "423"
   }, {
     "iri" : "http://www.w3.org/2006/time#hasTime",
     "baseIri" : "http://www.w3.org/2006/time",
@@ -6298,31 +6312,17 @@
     "comment" : {
       "undefined" : "Supports the association of a temporal entity (instant or interval) to any thing"
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "423"
-  }, {
-    "iri" : "https://saref.etsi.org/saref4inma/hasUUID",
-    "baseIri" : "https://saref.etsi.org/saref4inma",
-    "range" : "338",
-    "label" : {
-      "IRI-based" : "hasUUID"
-    },
-    "superproperty" : [ "425" ],
-    "domain" : "169",
-    "comment" : {
-      "undefined" : "A relationship determining the Universally Unique Identifier (UUID)"
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "424"
+    "attributes" : [ "object", "external" ],
+    "id" : "425"
   }, {
     "range" : "1",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "426"
   }, {
     "range" : "89",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "427"
   }, {
     "iri" : "https://saref.etsi.org/core/hasMeasurement",
@@ -6333,47 +6333,47 @@
       "IRI-based" : "hasMeasurement"
     },
     "domain" : "135",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "429"
   }, {
     "range" : "42",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "430"
   }, {
     "range" : "418",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "431"
   }, {
     "range" : "28",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "432"
   }, {
     "range" : "37",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "433"
   }, {
     "range" : "10",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "434"
   }, {
     "range" : "2",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "435"
   }, {
     "range" : "360",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "436"
   }, {
     "range" : "17",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "437"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/contains",
@@ -6387,7 +6387,7 @@
     "comment" : {
       "undefined" : "A relation between a physical space and the objects located in such space."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "object", "external", "transitive" ],
     "id" : "438"
   }, {
     "iri" : "https://saref.etsi.org/core/isMeasuredByDevice",
@@ -6400,76 +6400,76 @@
     "comment" : {
       "undefined" : "A relationship specifying the devices that can measure a certain property."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "441"
   }, {
     "range" : "15",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "442"
   }, {
     "range" : "33",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "443"
   }, {
     "range" : "44",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "446"
   }, {
     "range" : "1",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "447"
   }, {
     "range" : "89",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "448"
   }, {
     "range" : "24",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "449"
   }, {
     "range" : "23",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "450"
   }, {
     "range" : "42",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "451"
   }, {
     "range" : "28",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "453"
   }, {
     "range" : "37",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "454"
   }, {
     "range" : "10",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "455"
   }, {
     "range" : "42",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "456"
   }, {
     "range" : "17",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "457"
   }, {
     "iri" : "https://saref.etsi.org/core/hasProperty",
-    "inverse" : "226",
+    "inverse" : "279",
     "baseIri" : "https://saref.etsi.org/core",
     "range" : "51",
     "label" : {
@@ -6479,57 +6479,57 @@
     "comment" : {
       "undefined" : "A relationship between a feature of interest and a property of that feature"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "459"
   }, {
     "range" : "15",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "460"
   }, {
     "range" : "33",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "461"
   }, {
     "range" : "2",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "462"
   }, {
     "range" : "44",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "463"
   }, {
     "range" : "1",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "464"
   }, {
     "range" : "89",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "465"
   }, {
     "range" : "24",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "466"
   }, {
     "range" : "23",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "467"
   }, {
     "range" : "28",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "468"
   }, {
     "range" : "37",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "469"
   }, {
     "iri" : "https://saref.etsi.org/core/represents",
@@ -6542,37 +6542,37 @@
     "comment" : {
       "undefined" : "A relationship between a service and a function."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "470"
   }, {
     "range" : "42",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "472"
   }, {
     "range" : "10",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "473"
   }, {
     "range" : "2",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "474"
   }, {
     "range" : "418",
     "domain" : "360",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "475"
   }, {
     "range" : "17",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "476"
   }, {
     "range" : "33",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "477"
   }, {
     "iri" : "https://saref.etsi.org/core/hasValue",
@@ -6591,12 +6591,12 @@
   }, {
     "range" : "24",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "479"
   }, {
     "range" : "44",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "481"
   }, {
     "iri" : "https://saref.etsi.org/core/hasState",
@@ -6609,197 +6609,197 @@
     "comment" : {
       "undefined" : "A relationship for identifying the state of a production equipment.\nA relationship identifying the type of state of a device."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "482"
   }, {
     "range" : "15",
     "domain" : "398",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "483"
   }, {
     "range" : "15",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "484"
   }, {
     "range" : "220",
     "domain" : "486",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "485"
   }, {
     "range" : "33",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "487"
   }, {
     "range" : "220",
     "domain" : "489",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "488"
   }, {
     "range" : "2",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "490"
   }, {
     "range" : "220",
     "domain" : "404",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "491"
   }, {
     "range" : "44",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "492"
   }, {
     "range" : "220",
     "domain" : "494",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "493"
   }, {
     "range" : "220",
     "domain" : "496",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "495"
   }, {
     "range" : "121",
     "domain" : "120",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "497"
   }, {
     "range" : "24",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "498"
   }, {
     "range" : "121",
     "domain" : "480",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "499"
   }, {
     "range" : "178",
     "domain" : "121",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "500"
   }, {
     "range" : "178",
     "domain" : "502",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "501"
   }, {
     "range" : "178",
     "domain" : "504",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "503"
   }, {
     "range" : "23",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "506"
   }, {
     "range" : "1",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "507"
   }, {
     "range" : "37",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "508"
   }, {
     "range" : "17",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "510"
   }, {
     "range" : "89",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "511"
   }, {
     "range" : "28",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "512"
   }, {
     "range" : "44",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "513"
   }, {
     "range" : "15",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "514"
   }, {
     "range" : "220",
     "domain" : "420",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "515"
   }, {
     "range" : "10",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "516"
   }, {
     "range" : "220",
     "domain" : "440",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "517"
   }, {
     "range" : "2",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "518"
   }, {
     "range" : "220",
     "domain" : "520",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "519"
   }, {
     "range" : "220",
     "domain" : "522",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "521"
   }, {
     "range" : "220",
-    "domain" : "245",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "244",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "523"
   }, {
     "range" : "220",
     "domain" : "525",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "524"
   }, {
     "range" : "220",
     "domain" : "505",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "526"
   }, {
     "range" : "220",
     "domain" : "445",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "527"
   }, {
     "range" : "220",
     "domain" : "219",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "528"
   }, {
     "range" : "220",
     "domain" : "530",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "529"
   }, {
     "range" : "24",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "531"
   }, {
     "range" : "23",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "532"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/imo/IndustrialMaintenance#http://purl.org/dc/terms/type",
@@ -6818,22 +6818,22 @@
   }, {
     "range" : "33",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "535"
   }, {
     "range" : "28",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "536"
   }, {
     "range" : "37",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "537"
   }, {
     "range" : "1",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "538"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasIRDI",
@@ -6842,52 +6842,52 @@
     "label" : {
       "IRI-based" : "hasIRDI"
     },
-    "superproperty" : [ "425" ],
+    "superproperty" : [ "424" ],
     "domain" : "169",
     "comment" : {
       "undefined" : "A relationship determining the  International Registration Data Identifier (IRDI)"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "539"
   }, {
     "range" : "89",
     "domain" : "418",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "540"
   }, {
     "range" : "44",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "541"
   }, {
     "range" : "15",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "542"
   }, {
     "range" : "10",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "543"
   }, {
     "range" : "2",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "544"
   }, {
     "range" : "23",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "545"
   }, {
     "range" : "33",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "546"
   }, {
     "range" : "24",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "547"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -6900,57 +6900,57 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "548"
   }, {
     "range" : "17",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "549"
   }, {
     "range" : "10",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "550"
   }, {
     "range" : "1",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "551"
   }, {
     "range" : "89",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "552"
   }, {
     "range" : "15",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "553"
   }, {
     "range" : "33",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "554"
   }, {
     "range" : "2",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "555"
   }, {
     "range" : "50",
     "domain" : "452",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "556"
   }, {
     "range" : "44",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "557"
   }, {
     "range" : "205",
     "domain" : "444",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "558"
   }, {
     "iri" : "https://saref.etsi.org/core/hasMeterReading",
@@ -6963,17 +6963,17 @@
     "comment" : {
       "undefined" : "A relationship between a metering function and the measurement of the reading"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "559"
   }, {
     "range" : "24",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "560"
   }, {
     "range" : "23",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "561"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeObservation",
@@ -6986,32 +6986,32 @@
     "comment" : {
       "undefined" : "Relation between a Sensor and an Observation made by the Sensor"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "563"
   }, {
     "range" : "1",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "564"
   }, {
     "range" : "17",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "565"
   }, {
     "range" : "10",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "566"
   }, {
     "range" : "89",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "567"
   }, {
     "range" : "28",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "568"
   }, {
     "iri" : "https://saref.etsi.org/core/isControlledByDevice",
@@ -7024,7 +7024,7 @@
     "comment" : {
       "undefined" : "A relationship specifying the devices that can control a certain property"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "570"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasCriticality",
@@ -7050,7 +7050,7 @@
     "comment" : {
       "undefined" : "A relationship between a measurement and the property it relates to."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "572"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasVersion",
@@ -7068,17 +7068,17 @@
   }, {
     "range" : "1",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "574"
   }, {
     "range" : "17",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "575"
   }, {
     "range" : "23",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "576"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty",
@@ -7089,7 +7089,7 @@
     },
     "superproperty" : [ "68" ],
     "domain" : "30",
-    "subproperty" : [ "577", "211", "423", "578", "579", "206", "580", "52", "581" ],
+    "subproperty" : [ "577", "211", "425", "578", "579", "206", "580", "52", "581" ],
     "attributes" : [ "object" ],
     "id" : "55"
   }, {
@@ -7117,7 +7117,7 @@
     "comment" : {
       "undefined" : "A relationship between a certain entity (e.g., a device) and the task it accomplishes."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "583"
   }, {
     "iri" : "https://saref.etsi.org/core/hasManufacturer",
@@ -7157,7 +7157,7 @@
     "comment" : {
       "undefined" : "A relationship identifying an entity (e.g., a device) that can accomplish a task."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "584"
   }, {
     "iri" : "https://saref.etsi.org/core/relatesToMeasurement",
@@ -7171,7 +7171,7 @@
     "comment" : {
       "undefined" : "A relationship between a property and the measurements it relates to"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "588"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hosts",
@@ -7193,7 +7193,7 @@
     "comment" : {
       "undefined" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "589"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasModelNumber",
@@ -7217,12 +7217,12 @@
       "IRI-based" : "hasIdentifier"
     },
     "domain" : "169",
-    "subproperty" : [ "424", "539" ],
+    "subproperty" : [ "423", "539" ],
     "comment" : {
       "undefined" : "link between an entity and its unique identifier."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "425"
+    "attributes" : [ "object", "external" ],
+    "id" : "424"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -7232,7 +7232,7 @@
     },
     "superproperty" : [ "55" ],
     "domain" : "53",
-    "attributes" : [ "transitive", "symmetric", "object" ],
+    "attributes" : [ "object", "symmetric", "transitive" ],
     "id" : "580"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#sub_event",
@@ -7247,7 +7247,7 @@
     "comment" : {
       "undefined" : "This property provides a way to split a complex event into simpler ones."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "581"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasSeverity",
@@ -7273,7 +7273,7 @@
     "comment" : {
       "undefined" : "A relation between an object and the physical space in which it is located."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "object", "external", "transitive" ],
     "id" : "439"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#product",
@@ -7288,7 +7288,7 @@
     "comment" : {
       "undefined" : "Relates an event to something produced during the event---a sound, a pie, whatever..."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "579"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
@@ -7309,20 +7309,21 @@
     "comment" : {
       "undefined" : "Relation between a System and its subsystems."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "object", "external", "transitive" ],
     "id" : "598"
   }, {
-    "iri" : "https://saref.etsi.org/core/hasState",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "178",
+    "iri" : "https://saref.etsi.org/saref4inma/hasIDValue",
+    "baseIri" : "https://saref.etsi.org/saref4inma",
+    "range" : "600",
     "label" : {
-      "IRI-based" : "hasState"
+      "IRI-based" : "hasIDValue",
+      "undefined" : "hasIdentifierValue"
     },
     "domain" : "47",
     "comment" : {
-      "undefined" : "A relationship for identifying the state of a production equipment.\nA relationship identifying the type of state of a device."
+      "undefined" : "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property.\nAn unambiguous reference to the resource within a given context.\nA set of numbers, letters, or symbols that is used to represent uniquely an Entity or something.  \nID are custom or business-level defined."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "external", "datatype", "allValues" ],
     "id" : "599"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -7335,21 +7336,7 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "600"
-  }, {
-    "iri" : "https://saref.etsi.org/saref4inma/hasIDValue",
-    "baseIri" : "https://saref.etsi.org/saref4inma",
-    "range" : "602",
-    "label" : {
-      "IRI-based" : "hasIDValue",
-      "undefined" : "hasIdentifierValue"
-    },
-    "domain" : "47",
-    "comment" : {
-      "undefined" : "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property.\nAn unambiguous reference to the resource within a given context.\nA set of numbers, letters, or symbols that is used to represent uniquely an Entity or something.  \nID are custom or business-level defined."
-    },
-    "attributes" : [ "external", "datatype", "allValues" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "601"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasIdentifier",
@@ -7359,24 +7346,39 @@
       "IRI-based" : "hasIdentifier"
     },
     "domain" : "47",
-    "subproperty" : [ "424", "539" ],
+    "subproperty" : [ "423", "539" ],
     "comment" : {
       "undefined" : "link between an entity and its unique identifier."
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "603"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "602"
   }, {
-    "iri" : "https://saref.etsi.org/core/measuresProperty",
+    "iri" : "https://saref.etsi.org/core/makesMeasurement",
+    "inverse" : "264",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "51",
+    "range" : "57",
     "label" : {
-      "IRI-based" : "measuresProperty"
+      "IRI-based" : "makesMeasurement"
     },
     "domain" : "47",
     "comment" : {
-      "undefined" : "A relationship specifying the property that can be measured by a certain device"
+      "undefined" : "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "603"
+  }, {
+    "iri" : "https://saref.etsi.org/saref4inma/belongsToCategory",
+    "inverse" : "605",
+    "baseIri" : "https://saref.etsi.org/saref4inma",
+    "range" : "592",
+    "label" : {
+      "IRI-based" : "belongsToCategory"
+    },
+    "domain" : "47",
+    "comment" : {
+      "undefined" : "Link between an entity and its category"
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "604"
   }, {
     "iri" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent",
@@ -7390,8 +7392,8 @@
     "comment" : {
       "undefined" : "The DUL:hasPart relation without transitivity, holding between an Object (the system) and another (the component), and assuming a Design that structures the Object.\n\nA related resource that is included either physically or logically in the described resource.\nRelation between a Platform or System and its atomic Components (parts) ."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "605"
+    "attributes" : [ "object", "external" ],
+    "id" : "606"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/isCategoryOf",
     "baseIri" : "https://saref.etsi.org/saref4inma",
@@ -7403,22 +7405,21 @@
     "comment" : {
       "undefined" : "Link between a category and its associated entity"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "606"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "607"
   }, {
-    "iri" : "https://saref.etsi.org/core/makesMeasurement",
-    "inverse" : "260",
+    "iri" : "https://saref.etsi.org/core/measuresProperty",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "57",
+    "range" : "51",
     "label" : {
-      "IRI-based" : "makesMeasurement"
+      "IRI-based" : "measuresProperty"
     },
     "domain" : "47",
     "comment" : {
-      "undefined" : "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."
+      "undefined" : "A relationship specifying the property that can be measured by a certain device"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "607"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "608"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/hasSpace",
     "inverse" : "129",
@@ -7431,13 +7432,13 @@
     "comment" : {
       "undefined" : "Relation between a building or a building space and the spaces it can be divided into."
     },
-    "attributes" : [ "transitive", "external", "allValues", "object" ],
-    "id" : "608"
+    "attributes" : [ "object", "external", "allValues", "transitive" ],
+    "id" : "609"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/contains",
     "inverse" : "439",
     "baseIri" : "https://saref.etsi.org/saref4bldg",
-    "range" : "247",
+    "range" : "246",
     "label" : {
       "IRI-based" : "contains"
     },
@@ -7445,32 +7446,32 @@
     "comment" : {
       "undefined" : "A relation between a physical space and the objects located in such space."
     },
-    "attributes" : [ "transitive", "external", "allValues", "object" ],
-    "id" : "609"
+    "attributes" : [ "object", "external", "allValues", "transitive" ],
+    "id" : "610"
   }, {
     "range" : "301",
     "domain" : "302",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "610"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "611"
   }, {
     "range" : "306",
     "domain" : "222",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "611"
-  }, {
-    "range" : "46",
-    "domain" : "222",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "612"
   }, {
     "range" : "46",
-    "domain" : "306",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "222",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "613"
+  }, {
+    "range" : "46",
+    "domain" : "306",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "614"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasIDValue",
     "baseIri" : "https://saref.etsi.org/saref4inma",
-    "range" : "615",
+    "range" : "616",
     "label" : {
       "IRI-based" : "hasIDValue",
       "undefined" : "hasIdentifierValue"
@@ -7479,22 +7480,21 @@
     "comment" : {
       "undefined" : "A relation to express the value of an indentifier as a string (it can be used as alternative to or in combination with the s4inma:hasIdentifier object property.\nAn unambiguous reference to the resource within a given context.\nA set of numbers, letters, or symbols that is used to represent uniquely an Entity or something.  \nID are custom or business-level defined."
     },
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "614"
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "615"
   }, {
-    "iri" : "https://saref.etsi.org/saref4inma/belongsToCategory",
-    "inverse" : "617",
-    "baseIri" : "https://saref.etsi.org/saref4inma",
-    "range" : "592",
+    "iri" : "https://saref.etsi.org/core/hasState",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "178",
     "label" : {
-      "IRI-based" : "belongsToCategory"
+      "IRI-based" : "hasState"
     },
     "domain" : "47",
     "comment" : {
-      "undefined" : "Link between an entity and its category"
+      "undefined" : "A relationship for identifying the state of a production equipment.\nA relationship identifying the type of state of a device."
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "616"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "617"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
     "baseIri" : "https://saref.etsi.org/core",
@@ -7506,12 +7506,12 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "618"
   }, {
     "range" : "220",
     "domain" : "596",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "619"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/hasSpace",
@@ -7521,11 +7521,11 @@
     "label" : {
       "IRI-based" : "hasSpace"
     },
-    "domain" : "256",
+    "domain" : "255",
     "comment" : {
       "undefined" : "Relation between a building or a building space and the spaces it can be divided into."
     },
-    "attributes" : [ "transitive", "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues", "transitive" ],
     "id" : "620"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction",
@@ -7540,45 +7540,27 @@
     "id" : "578"
   }, {
     "range" : "138",
-    "domain" : "229",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "228",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "621"
   }, {
-    "iri" : "https://saref.etsi.org/core/isControlledByDevice",
+    "iri" : "https://saref.etsi.org/core/isMeasuredByDevice",
     "baseIri" : "https://saref.etsi.org/core",
     "range" : "50",
     "label" : {
-      "IRI-based" : "isControlledByDevice"
+      "IRI-based" : "isMeasuredByDevice"
     },
     "domain" : "51",
     "comment" : {
-      "undefined" : "A relationship specifying the devices that can control a certain property"
+      "undefined" : "A relationship specifying the devices that can measure a certain property."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "622"
   }, {
     "range" : "138",
     "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "623"
-  }, {
-    "iri" : "https://saref.etsi.org/core/hasSensingRange",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "57",
-    "label" : {
-      "IRI-based" : "hasSensingRange"
-    },
-    "domain" : "62",
-    "comment" : {
-      "undefined" : "A relationship between a sensing function and a measurement identifying the range of a sensor detection."
-    },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "624"
-  }, {
-    "range" : "138",
-    "domain" : "158",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "625"
   }, {
     "iri" : "https://saref.etsi.org/core/hasSensorType",
     "baseIri" : "https://saref.etsi.org/core",
@@ -7590,12 +7572,30 @@
     "comment" : {
       "undefined" : "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.)"
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "624"
+  }, {
+    "range" : "138",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "625"
+  }, {
+    "iri" : "https://saref.etsi.org/core/hasSensingRange",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasSensingRange"
+    },
+    "domain" : "62",
+    "comment" : {
+      "undefined" : "A relationship between a sensing function and a measurement identifying the range of a sensor detection."
+    },
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "626"
   }, {
     "range" : "138",
     "domain" : "471",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "627"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -7608,12 +7608,12 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "628"
   }, {
     "range" : "220",
     "domain" : "343",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "629"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -7626,12 +7626,12 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "630"
   }, {
     "range" : "220",
-    "domain" : "242",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "241",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "631"
   }, {
     "iri" : "http://purl.org/dc/terms/isPartOf",
@@ -7641,11 +7641,11 @@
       "IRI-based" : "isPartOf",
       "undefined" : "isPartOf"
     },
-    "domain" : "239",
+    "domain" : "238",
     "comment" : {
       "undefined" : "A related resource in which the described resource is physically or logically included.\nRelation between a component (e.g piece or part) and bigger Entity : System or Platform."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "632"
   }, {
     "iri" : "https://saref.etsi.org/core/hasFunction",
@@ -7658,12 +7658,12 @@
     "comment" : {
       "undefined" : "A relationship identifying the function of a device"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "633"
   }, {
     "range" : "220",
     "domain" : "587",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "634"
   }, {
     "iri" : "https://saref.etsi.org/core/isOfferedBy",
@@ -7673,35 +7673,53 @@
     "label" : {
       "IRI-based" : "isOfferedBy"
     },
-    "domain" : "241",
+    "domain" : "231",
     "comment" : {
       "undefined" : "A relationship between a service and a device that offers the service"
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "635"
   }, {
     "range" : "220",
-    "domain" : "243",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "242",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "636"
   }, {
     "iri" : "https://saref.etsi.org/core/represents",
     "baseIri" : "https://saref.etsi.org/core",
-    "range" : "232",
+    "range" : "240",
     "label" : {
       "IRI-based" : "represents"
     },
-    "domain" : "241",
+    "domain" : "231",
     "comment" : {
       "undefined" : "A relationship between a service and a function."
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "637"
   }, {
     "range" : "220",
     "domain" : "597",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "638"
+  }, {
+    "iri" : "https://saref.etsi.org/core/isControlledByDevice",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "isControlledByDevice"
+    },
+    "domain" : "51",
+    "comment" : {
+      "undefined" : "A relationship specifying the devices that can control a certain property"
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "639"
+  }, {
+    "range" : "58",
+    "domain" : "509",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "640"
   }, {
     "iri" : "https://saref.etsi.org/core/relatesToMeasurement",
     "inverse" : "572",
@@ -7714,30 +7732,12 @@
     "comment" : {
       "undefined" : "A relationship between a property and the measurements it relates to"
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "639"
-  }, {
-    "range" : "58",
-    "domain" : "509",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "640"
-  }, {
-    "iri" : "https://saref.etsi.org/core/isMeasuredByDevice",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "50",
-    "label" : {
-      "IRI-based" : "isMeasuredByDevice"
-    },
-    "domain" : "51",
-    "comment" : {
-      "undefined" : "A relationship specifying the devices that can measure a certain property."
-    },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "641"
   }, {
     "range" : "58",
     "domain" : "422",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "642"
   }, {
     "iri" : "https://saref.etsi.org/core/isPropertyOf",
@@ -7750,7 +7750,7 @@
     "comment" : {
       "undefined" : "A relationship between a property and the feature of interest it belongs to"
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "643"
   }, {
     "iri" : "https://saref.etsi.org/core/offers",
@@ -7763,7 +7763,7 @@
     "comment" : {
       "undefined" : "A relationship between a device and a service"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "218"
   }, {
     "iri" : "https://saref.etsi.org/saref4bldg/isSpaceOf",
@@ -7776,7 +7776,7 @@
     "comment" : {
       "undefined" : "Relation between a building space and the building or building space it belongs to."
     },
-    "attributes" : [ "transitive", "external", "object" ],
+    "attributes" : [ "object", "external", "transitive" ],
     "id" : "129"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isPrimaryOrBackup",
@@ -7794,7 +7794,7 @@
   }, {
     "range" : "208",
     "domain" : "458",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "645"
   }, {
     "iri" : "https://saref.etsi.org/core/isMeasurementOf",
@@ -7804,36 +7804,13 @@
       "IRI-based" : "isMeasurementOf"
     },
     "domain" : "57",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "646"
   }, {
     "range" : "73",
     "domain" : "590",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "647"
-  }, {
-    "iri" : "https://saref.etsi.org/core/hasTimestamp",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "649",
-    "label" : {
-      "IRI-based" : "hasTimestamp"
-    },
-    "domain" : "57",
-    "comment" : {
-      "undefined" : "A relationship stating the timestamp of an entity (e.g. a measurement)."
-    },
-    "attributes" : [ "external", "datatype", "allValues" ],
-    "id" : "648"
-  }, {
-    "range" : "73",
-    "domain" : "193",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "650"
-  }, {
-    "range" : "73",
-    "domain" : "591",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "651"
   }, {
     "iri" : "https://saref.etsi.org/core/relatesToProperty",
     "baseIri" : "https://saref.etsi.org/core",
@@ -7845,13 +7822,13 @@
     "comment" : {
       "undefined" : "A relationship between a measurement and the property it relates to."
     },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "652"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "648"
   }, {
-    "range" : "247",
-    "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "653"
+    "range" : "73",
+    "domain" : "193",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "649"
   }, {
     "iri" : "https://saref.etsi.org/core/isMeasuredIn",
     "baseIri" : "https://saref.etsi.org/core",
@@ -7863,31 +7840,36 @@
     "comment" : {
       "undefined" : "A relationship identifying the unit of measure used for a certain entity."
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "650"
+  }, {
+    "range" : "73",
+    "domain" : "591",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "651"
+  }, {
+    "iri" : "https://saref.etsi.org/core/hasTimestamp",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "653",
+    "label" : {
+      "IRI-based" : "hasTimestamp"
+    },
+    "domain" : "57",
+    "comment" : {
+      "undefined" : "A relationship stating the timestamp of an entity (e.g. a measurement)."
+    },
+    "attributes" : [ "external", "datatype", "allValues" ],
+    "id" : "652"
+  }, {
+    "range" : "246",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "654"
   }, {
     "range" : "58",
     "domain" : "594",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "655"
-  }, {
-    "iri" : "https://saref.etsi.org/core/hasMeterReading",
-    "baseIri" : "https://saref.etsi.org/core",
-    "range" : "57",
-    "label" : {
-      "IRI-based" : "hasMeterReading"
-    },
-    "domain" : "60",
-    "comment" : {
-      "undefined" : "A relationship between a metering function and the measurement of the reading"
-    },
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "656"
-  }, {
-    "range" : "58",
-    "domain" : "214",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "657"
   }, {
     "iri" : "https://saref.etsi.org/core/hasMeterReading",
     "baseIri" : "https://saref.etsi.org/core",
@@ -7899,12 +7881,30 @@
     "comment" : {
       "undefined" : "A relationship between a metering function and the measurement of the reading"
     },
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "656"
+  }, {
+    "range" : "58",
+    "domain" : "214",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "657"
+  }, {
+    "iri" : "https://saref.etsi.org/core/hasMeterReading",
+    "baseIri" : "https://saref.etsi.org/core",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasMeterReading"
+    },
+    "domain" : "60",
+    "comment" : {
+      "undefined" : "A relationship between a metering function and the measurement of the reading"
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "658"
   }, {
     "range" : "58",
     "domain" : "428",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "659"
   }, {
     "iri" : "https://saref.etsi.org/core/hasThresholdMeasurement",
@@ -7917,7 +7917,7 @@
     "comment" : {
       "undefined" : "A relationship associated with an event function to notify that a certain threshold measurement has been exceeded"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "660"
   }, {
     "iri" : "https://saref.etsi.org/saref4inma/hasSerialNumber",
@@ -7949,7 +7949,7 @@
     "iri" : "http://purl.org/dc/terms/hasPart",
     "inverse" : "632",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "239",
+    "range" : "238",
     "label" : {
       "IRI-based" : "hasPart",
       "undefined" : "hasPart"
@@ -7958,7 +7958,7 @@
     "comment" : {
       "undefined" : "A related resource that is included either physically or logically in the described resource.\nRelation between a Platform or System and its smallest Components (parts) ."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "663"
   }, {
     "iri" : "https://saref.etsi.org/core/hasModel",
@@ -7985,19 +7985,8 @@
     "comment" : {
       "undefined" : "A relation between a measurement and the device that made it."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "260"
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "range" : "53",
-    "label" : {
-      "IRI-based" : "isRelatedTo"
-    },
-    "superproperty" : [ "55" ],
-    "domain" : "53",
-    "attributes" : [ "transitive", "symmetric", "someValues", "object" ],
-    "id" : "665"
+    "attributes" : [ "object", "external" ],
+    "id" : "264"
   }, {
     "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect",
     "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
@@ -8008,53 +7997,7 @@
     "superproperty" : [ "55" ],
     "domain" : "53",
     "attributes" : [ "someValues", "object" ],
-    "id" : "666"
-  }, {
-    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction",
-    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
-    "range" : "562",
-    "label" : {
-      "IRI-based" : "hasRecommendedAction"
-    },
-    "superproperty" : [ "55" ],
-    "domain" : "53",
-    "attributes" : [ "someValues", "object" ],
-    "id" : "667"
-  }, {
-    "iri" : "http://www.w3.org/2006/time#hasTime",
-    "baseIri" : "http://www.w3.org/2006/time",
-    "range" : "363",
-    "label" : {
-      "IRI-based" : "hasTime",
-      "undefined" : "hasTime"
-    },
-    "superproperty" : [ "55" ],
-    "domain" : "53",
-    "comment" : {
-      "undefined" : "Supports the association of a temporal entity (instant or interval) to any thing"
-    },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "668"
-  }, {
-    "range" : "54",
-    "domain" : "182",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "669"
-  }, {
-    "range" : "398",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "670"
-  }, {
-    "range" : "360",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "671"
-  }, {
-    "range" : "418",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "672"
+    "id" : "665"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#place",
     "baseIri" : "http://purl.org/NET/c4dm/event.owl",
@@ -8067,8 +8010,50 @@
     "comment" : {
       "undefined" : "Relates an event to an object."
     },
-    "attributes" : [ "external", "someValues", "object" ],
-    "id" : "673"
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "666"
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#isRelatedTo",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "isRelatedTo"
+    },
+    "superproperty" : [ "55" ],
+    "domain" : "53",
+    "attributes" : [ "someValues", "object", "symmetric", "transitive" ],
+    "id" : "667"
+  }, {
+    "iri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasRecommendedAction",
+    "baseIri" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance",
+    "range" : "562",
+    "label" : {
+      "IRI-based" : "hasRecommendedAction"
+    },
+    "superproperty" : [ "55" ],
+    "domain" : "53",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "668"
+  }, {
+    "range" : "54",
+    "domain" : "182",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "669"
+  }, {
+    "range" : "398",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "670"
+  }, {
+    "range" : "360",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "671"
+  }, {
+    "range" : "418",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "672"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#sub_event",
     "baseIri" : "http://purl.org/NET/c4dm/event.owl",
@@ -8082,7 +8067,22 @@
     "comment" : {
       "undefined" : "This property provides a way to split a complex event into simpler ones."
     },
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "someValues", "object", "external" ],
+    "id" : "673"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#hasTime",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "range" : "363",
+    "label" : {
+      "IRI-based" : "hasTime",
+      "undefined" : "hasTime"
+    },
+    "superproperty" : [ "55" ],
+    "domain" : "53",
+    "comment" : {
+      "undefined" : "Supports the association of a temporal entity (instant or interval) to any thing"
+    },
+    "attributes" : [ "someValues", "object", "external" ],
     "id" : "674"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/member",
@@ -8104,7 +8104,7 @@
     "comment" : {
       "undefined" : "Indicates a member of a Group"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "675"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#place",
@@ -8118,7 +8118,7 @@
     "comment" : {
       "undefined" : "Relates an event to an object."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "577"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
@@ -8132,7 +8132,7 @@
     "comment" : {
       "undefined" : "Relation between an Observation and the Sensor which made the Observations."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "676"
   } ]
 }

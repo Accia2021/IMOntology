@@ -7,8 +7,10 @@
 @base <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance> .
 
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance> rdf:type owl:Ontology ;
-                                                                                  rdfs:comment """The Industrial Maintenance Ontology IMO aims to model industrial maintenance concepts (predictive and corrective). This first part named \"Infrastructure\" covers structural concerns of the domain  (i.e, organization and composition) like relationship between elements of interest, physical or digital : Entities, Functions, Properties, etc. and some of their specialization.
-It is reusing concepts from ontologies like Smart Applications REFerence Ontology SAREF and Semantic Sensor Network Ontology SSN.""" ;
+                                                                                  rdfs:comment """The Industrial Maintenance Ontology IMO aims to model industrial maintenance concepts (predictive and corrective). It covers three scopes : 1)Infrastructure, 2) Eventing with failure handling and 3)Resources. 
+Infrastructure scope  handles structural concerns of the domain  (i.e, organization and composition) like relationship between elements of interest, physical or digital : Entities, Functions, Properties, etc. and some of their specialization. The Eventing scope covers Event concepts like Failures, Errors, Sensor, triggred alarms and related Diagnosis informations like Causes, Effects and Recommanded Actions.
+Third scopre covered by the ontology is Resources. It defines concepts like Documents, Procedures, Agents, etc.
+The Ontology reuses concepts from widely used ontologies like Smart Applications REFerence Ontology SAREF, Semantic Sensor Network Ontology SSN, FOAF, etc.""" ;
                                                                                   owl:versionInfo "1.0.0" .
 
 #################################################################

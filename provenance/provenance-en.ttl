@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance> a prov:Entity;
+	 dc:title "Industrial Maintenance Ontology IMO";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance>;
+	 prov:wasGeneratedAt "2021";
+.
+:agent0 a prov:Agent; foaf:name "Amina EL OUAFI".
+:agent1 a prov:Agent; foaf:name "Rami BELKAROUI".
