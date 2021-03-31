@@ -1095,6 +1095,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If the entity has lots of defects, it leads to failure or causes failure... Human mistakes cause fault."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ]
@@ -1179,6 +1182,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An Error is a mistake made in the entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ]
@@ -1203,6 +1209,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A “failure” is the manner in which an item or operation potentially fails to meet or deliver the intended function and associated requirements. Depending on the definition of failure established by the analysis team, failure modes may include failure to perform a function within defined limits, inadequate or poor performance of the function, intermittent performance of a function, and/or performing an unintended or undesired function. There may be many failure modes for each function."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ]
@@ -1215,6 +1224,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Fault is a state that causes the entity to fail to accomplish its essential function."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ]
@@ -1557,6 +1569,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Planning phase is all about identifying the shutdown work scope, then identifying parts, labor, equipment and other resources required to carry out the shutdown. The output of the planning phase is a set of comprehensive shutdown work packs, assurance that everything is available to carry out the work."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ]

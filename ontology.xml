@@ -1163,6 +1163,7 @@ Example : processor.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect">
         <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>If the entity has lots of defects, it leads to failure or causes failure... Human mistakes cause fault.</rdfs:comment>
     </owl:Class>
     
 
@@ -1272,6 +1273,7 @@ Example : processor.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error">
         <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>An Error is a mistake made in the entity.</rdfs:comment>
     </owl:Class>
     
 
@@ -1302,6 +1304,7 @@ Example : processor.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure">
         <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>A “failure” is the manner in which an item or operation potentially fails to meet or deliver the intended function and associated requirements. Depending on the definition of failure established by the analysis team, failure modes may include failure to perform a function within defined limits, inadequate or poor performance of the function, intermittent performance of a function, and/or performing an unintended or undesired function. There may be many failure modes for each function.</rdfs:comment>
     </owl:Class>
     
 
@@ -1320,6 +1323,7 @@ Example : processor.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault">
         <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>The Fault is a state that causes the entity to fail to accomplish its essential function.</rdfs:comment>
     </owl:Class>
     
 
@@ -1775,6 +1779,7 @@ necessary for maintenance personnel in their daily activities.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown">
         <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+        <rdfs:comment>The Planning phase is all about identifying the shutdown work scope, then identifying parts, labor, equipment and other resources required to carry out the shutdown. The output of the planning phase is a set of comprehensive shutdown work packs, assurance that everything is available to carry out the work.</rdfs:comment>
     </owl:Class>
     
 

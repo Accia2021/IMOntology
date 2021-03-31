@@ -605,6 +605,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Defect> <http://www.w3.org/2000/01/rdf-schema#comment> "If the entity has lots of defects, it leads to failure or causes failure... Human mistakes cause fault." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#DigitalComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -654,6 +655,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Error> <http://www.w3.org/2000/01/rdf-schema#comment> "An Error is a mistake made in the entity." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -667,6 +669,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure> <http://www.w3.org/2000/01/rdf-schema#comment> "A “failure” is the manner in which an item or operation potentially fails to meet or deliver the intended function and associated requirements. Depending on the definition of failure established by the analysis team, failure modes may include failure to perform a function within defined limits, inadequate or poor performance of the function, intermittent performance of a function, and/or performing an unintended or undesired function. There may be many failure modes for each function." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fan
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -675,6 +678,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Fault> <http://www.w3.org/2000/01/rdf-schema#comment> "The Fault is a state that causes the entity to fail to accomplish its essential function." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -879,6 +883,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/event.owl#Event> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PlannedShutdown> <http://www.w3.org/2000/01/rdf-schema#comment> "The Planning phase is all about identifying the shutdown work scope, then identifying parts, labor, equipment and other resources required to carry out the shutdown. The output of the planning phase is a set of comprehensive shutdown work packs, assurance that everything is available to carry out the work." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerFailure
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PowerFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
