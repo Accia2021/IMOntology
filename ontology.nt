@@ -82,6 +82,11 @@
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 # 
+# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core/Sensor> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration> .
+# 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EventProperty> .
@@ -552,10 +557,6 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Breakage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Breakage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure> .
 # 
-# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor
-<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType> .
-# 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Device> .
@@ -642,6 +643,11 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Sensor> .
+# 
+# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration of an embedded sensor hosted on a platform or a device." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Equipment
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -929,9 +935,10 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction> .
 # 
-# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor
-<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType> .
+# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration of a nonintrusive sensor opertaing remotly." .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -950,8 +957,9 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Screw> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent> .
 # 
-# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType
-<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor configuration : Remote, Embedded" .
 # 
 # http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit
 <http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

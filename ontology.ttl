@@ -106,6 +106,12 @@ Relation between a component (e.g piece or part) and grouping Entity : System or
                rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration
+:hasConfiguration rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://saref.etsi.org/core/Sensor> ;
+                  rdfs:range :SensorConfiguration .
+
+
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect
 :hasEffect rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :EventProperty ;
@@ -656,11 +662,6 @@ Platform, Component, System are example of Entities.""" ;
           rdfs:subClassOf :Failure .
 
 
-###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor
-:BuiltinSensor rdf:type owl:Class ;
-               rdfs:subClassOf :SensorType .
-
-
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera
 :Camera rdf:type owl:Class ;
         rdfs:subClassOf <https://saref.etsi.org/core/Device> .
@@ -768,6 +769,12 @@ Example : processor.""" .
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer
 :ElectromagneticFieldAnalyzer rdf:type owl:Class ;
                               rdfs:subClassOf <https://saref.etsi.org/core/Sensor> .
+
+
+###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration
+:EmbeddedSensorConfiguration rdf:type owl:Class ;
+                             rdfs:subClassOf :SensorConfiguration ;
+                             rdfs:comment "Configuration of an embedded sensor hosted on a platform or a device." .
 
 
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Equipment
@@ -1127,9 +1134,10 @@ necessary for maintenance personnel in their daily activities.""" .
         rdfs:subClassOf :SystemReaction .
 
 
-###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor
-:RemoteSensor rdf:type owl:Class ;
-              rdfs:subClassOf :SensorType .
+###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration
+:RemoteSensorConfiguration rdf:type owl:Class ;
+                           rdfs:subClassOf :SensorConfiguration ;
+                           rdfs:comment "Configuration of a nonintrusive sensor opertaing remotly." .
 
 
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository
@@ -1153,8 +1161,9 @@ necessary for maintenance personnel in their daily activities.""" .
        rdfs:subClassOf :PhysicalComponent .
 
 
-###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType
-:SensorType rdf:type owl:Class .
+###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration
+:SensorConfiguration rdf:type owl:Class ;
+                     rdfs:comment "Sensor configuration : Remote, Embedded" .
 
 
 ###  http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit

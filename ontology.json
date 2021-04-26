@@ -997,12 +997,6 @@
     "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Failure"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1154,6 +1148,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Configuration of an embedded sensor hosted on a platform or a device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EnergyNominal",
@@ -1654,10 +1657,13 @@
     "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SystemReaction"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor",
+  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Configuration of a nonintrusive sensor opertaing remotly."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"
+    "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Repository",
@@ -1699,8 +1705,11 @@
     "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#PhysicalComponent"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sensor configuration : Remote, Embedded"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Shortcircuit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1922,6 +1931,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core/Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasCriticality",

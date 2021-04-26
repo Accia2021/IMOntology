@@ -157,6 +157,16 @@ Relation between a component (e.g piece or part) and grouping Entity : System or
     
 
 
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasConfiguration">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#hasEffect -->
 
 
@@ -1047,15 +1057,6 @@ Platform, Component, System are example of Entities.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor -->
-
-
-    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#BuiltinSensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#Camera -->
 
 
@@ -1245,6 +1246,16 @@ Example : processor.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#ElectromagneticFieldAnalyzer">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#EmbeddedSensorConfiguration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"/>
+        <rdfs:comment>Configuration of an embedded sensor hosted on a platform or a device.</rdfs:comment>
     </owl:Class>
     
 
@@ -1883,11 +1894,12 @@ necessary for maintenance personnel in their daily activities.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor -->
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensor">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#RemoteSensorConfiguration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration"/>
+        <rdfs:comment>Configuration of a nonintrusive sensor opertaing remotly.</rdfs:comment>
     </owl:Class>
     
 
@@ -1929,10 +1941,12 @@ necessary for maintenance personnel in their daily activities.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType -->
+    <!-- http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration -->
 
 
-    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/amina.elouafi/ontologies/2021/industrialMaintenance#SensorConfiguration">
+        <rdfs:comment>Sensor configuration : Remote, Embedded</rdfs:comment>
+    </owl:Class>
     
 
 
